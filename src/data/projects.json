@@ -4,23 +4,16 @@
     "links": [
       {
         "name": "To Boldly Go Where None Have Gone Before",
-        "description": "Course project for COMP 4304: Data Visualization",
+        "description": "project for COMP 4304",
         "link": "https://github.com/EthanDenny/to-boldly-go",
         "wip": false,
         "hidden": false
       },
       {
-        "name": "Undergratuate Honours Work",
-        "description": "Researching applications of augemented-reality sandboxes to physics and climate education",
-        "link": "https://github.com/EthanDenny/sandbox",
+        "name": "Modelling Physics Problems on an Augmented Reality Sandbox",
+        "description": "undergrad thesis",
+        "link": "https://davechurchill.ca/publications/pdf/theses/EthanDenny_Thesis_Honours.pdf",
         "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "Unsolver",
-        "description": "Take any number and \"unsolve\" it by turning it into a custom equation",
-        "link": "https://github.com/EthanDenny/unsolver",
-        "wip": true,
         "hidden": false
       }
     ]
@@ -30,71 +23,22 @@
     "links": [
       {
         "name": "Bubblegum Bloodbath",
-        "description": "Course project for COMP 4300: Game Programming",
+        "description": "project for COMP 4300",
         "link": "https://www.youtube.com/watch?v=APVTMvT-CXE",
         "wip": false,
         "hidden": false
       },
       {
-        "name": "Car Rental Agency Demo",
-        "description": "Course project for COMP 4754: Database Systems",
-        "link": "https://github.com/hamoodev/comp4754",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "xkcd bot",
-        "description": "Summon xkcd comics directly to your eyeballs in the form of Discord messages",
-        "link": "https://github.com/EthanDenny/xkcd-bot",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "Connections",
-        "description": "Solving the NYT game \"Connections\" with machine learning",
-        "link": "/blog/solving-connections",
-        "wip": true,
-        "hidden": true
-      },
-      {
-        "name": "My personal site",
-        "description": "Where you are right now!",
-        "link": "https://github.com/EthanDenny/personal-site",
-        "wip": false,
-        "hidden": false
-      },
-      {
         "name": "Connect2",
-        "description": "My team's submission for the Don't Overthink It Hackathon",
+        "description": "team submission for the D.O. IT Hackathon",
         "link": "https://github.com/EthanDenny/do-it-hackathon",
         "wip": false,
         "hidden": false
       },
       {
-        "name": "Finance Tracker",
-        "description": "Personal replacement for tools like YNAB, Mint, etc.",
-        "link": "https://github.com/EthanDenny/finance-tracker",
-        "wip": true,
-        "hidden": true
-      },
-      {
         "name": "Pixelz",
-        "description": "A prototype falling-sand game in the style of things like The Powder Toy, Sandspiel, and Noita",
-        "link": "https://github.com/EthanDenny/pixelz",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "Yap",
-        "description": "A LISP written in Go for fun",
-        "link": "https://github.com/EthanDenny/yap",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "Flip",
-        "description": "A programming language inspired by functional programming and Lisp",
-        "link": "https://github.com/EthanDenny/flip",
+        "description": "falling-sand game",
+        "link": "https://pixelz.ethandenny.dev/",
         "wip": false,
         "hidden": false
       }
@@ -104,63 +48,23 @@
     "year": 2023,
     "links": [
       {
-        "name": "Advent of Code 2023",
-        "description": "My solutions for Advent of Code 2023",
-        "link": "https://github.com/EthanDenny/advent-of-code-2023",
-        "wip": false,
-        "hidden": false
-      },
-      {
         "name": "Lossless Compression Techniques for Grayscale Images",
-        "description": "Course project for COMP 3301: Visual Computing and Applications",
+        "description": "project for COMP 3301",
         "link": "https://github.com/EthanDenny/visual-computing-course-project",
         "wip": false,
         "hidden": false
       },
       {
-        "name": "\"Rate My Prof\" Discord bot",
-        "description": "A Discord bot that scrapes <a href=\"https://www.ratemyprofessors.com\" target=\"_blank\" rel=\"noopener noreferrer\">www.ratemyprofessors.com</a> for the ratings of professors from Memorial University",
-        "link": "https://github.com/EthanDenny/rate-my-prof-bot",
-        "wip": false,
-        "hidden": false
-      },
-      {
         "name": "tiny text",
-        "description": "A minimalist text editor with pleasant colours ",
+        "description": "minimalist text editor",
         "link": "https://github.com/EthanDenny/tiny-text-editor",
         "wip": false,
         "hidden": false
       },
       {
-        "name": "Spelunky Classic Lua",
-        "description": "Remake of the game \"Spelunky Classic\" in Lua using the LÖVE game engine and the Concord ECS library ",
-        "link": "https://github.com/EthanDenny/spelunky-classic-lua",
-        "wip": true,
-        "hidden": true
-      },
-      {
         "name": "Can't Stop",
-        "description": "Course project for COMP 2005: Software Development",
+        "description": "project for COMP 2005",
         "link": "https://github.com/EthanDenny/comp-2005-cant-stop-jar",
-        "wip": false,
-        "hidden": false
-      }
-    ]
-  },
-  {
-    "year": 2022,
-    "links": [
-      {
-        "name": "Advent of Code 2022",
-        "description": "My solutions for Advent of Code 2022",
-        "links": "https://github.com/EthanDenny/advent-of-code-2022",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "Rock Paper Scissors",
-        "description": "A simulator for a multi-competitor rock-paper-scissors-like game",
-        "link": "https://github.com/EthanDenny/rock-paper-scissors",
         "wip": false,
         "hidden": false
       }

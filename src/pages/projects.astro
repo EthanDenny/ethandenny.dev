@@ -8,24 +8,27 @@ import projects from "../data/projects.json";
 
 <BaseLayout title="Projects">
   <div class="mb-8 flex flex-col gap-6">
+    <p>
+      Not an exhaustive list, there's more to see on my <a
+        href="https://github.com/EthanDenny">GitHub</a
+      >
+    </p>
     {
       projects.map(({ year, links }) => (
-        <div class="text-lg">
-          <h5 class="mb-4">{year}</h5>
-          {links.map(
-            ({ name, description, link, wip, hidden }) =>
-              !hidden && (
-                <div class="mt-4 flex flex-col gap-2">
-                  <li>
-                    <a href={link} rel="noopener noreferrer">
-                      {name}
-                    </a>
-                    {wip && <span>(work in progress)</span>}
-                  </li>
-                  <p class="text-block ml-8" set:html={description} />
-                </div>
-              ),
-          )}
+        <div class="flex w-full">
+          <h5 class="w-20 font-bold">{year}</h5>
+          <div class="flex flex-1 flex-col gap-2">
+            {links.map(({ name, description, link }) => (
+              <div class="flex w-full items-baseline justify-between">
+                <a href={link} rel="noopener noreferrer">
+                  {name}
+                </a>
+                {description && (
+                  <span class="text-sm text-slate-500">{description}</span>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       ))
     }

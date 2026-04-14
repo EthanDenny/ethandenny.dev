@@ -1,0 +1,107 @@
+[
+  {
+    "section": "Writing",
+    "links": [
+      {
+        "name": "How to get a job as a software developer",
+        "link": "/garden/how-to-get-a-job",
+        "description": "2026-04-13"
+      }
+    ]
+  },
+  {
+    "section": "Links",
+    "links": [
+      {
+        "name": "Hacker News",
+        "link": "https://news.ycombinator.com",
+        "description": "the source from which all good links come"
+      },
+      {
+        "name": "Doing good in your courses",
+        "link": "https://cs.stanford.edu/people/karpathy/advice.html",
+        "description": "by Andrej Karpathy"
+      },
+      {
+        "name": "Astro",
+        "link": "https://astro.build/",
+        "description": "what I used to build this site"
+      }
+    ]
+  },
+  {
+    "section": "Albums",
+    "links": [
+      {
+        "name": "Ants From Up There",
+        "link": "https://music.apple.com/us/album/ants-from-up-there/1586070259",
+        "description": "Black Country, New Road"
+      },
+      {
+        "name": "Madvillainy",
+        "link": "https://music.apple.com/us/album/madvillainy/887699504",
+        "description": "Madvillain (MF DOOM & Madlib)"
+      },
+      {
+        "name": "Heavy Metal",
+        "link": "https://music.apple.com/us/album/heavy-metal/1766984761",
+        "description": "Cameron Winter"
+      },
+      {
+        "name": "Hyperdrama",
+        "link": "https://music.apple.com/us/album/hyperdrama/1724935208",
+        "description": "Justice"
+      },
+      {
+        "name": "22, A Million",
+        "link": "https://music.apple.com/ca/album/22-a-million/1141107722",
+        "description": "Bon Iver"
+      }
+    ]
+  },
+  {
+    "section": "Games",
+    "links": [
+      {
+        "name": "Spelunky",
+        "link": "https://news.ycombinator.com",
+        "description": "revitalized the roguelike genre"
+      },
+      {
+        "name": "Slay The Spire",
+        "link": "https://store.steampowered.com/app/646570/Slay_the_Spire/",
+        "description": "a deck-building roguelike"
+      },
+      {
+        "name": "Nuclear Throne",
+        "link": "https://store.steampowered.com/app/371640/Nuclear_Throne/",
+        "description": "another roguelike, very shooty"
+      },
+      {
+        "name": "Hades",
+        "link": "https://store.steampowered.com/app/1145000/Hades/",
+        "description": "yet another roguelike :P"
+      },
+      {
+        "name": "Sid Meier's Civilization V",
+        "link": "https://store.steampowered.com/app/8930/Sid_Meiers_Civilization_V/",
+        "description": "peak hexagonal strategy experience"
+      },
+      {
+        "name": "Hollow Knight",
+        "link": "https://store.steampowered.com/app/367500/Hollow_Knight/",
+        "description": "beautiful metroidvania about bugs"
+      },
+      {
+        "name": "Outer Wilds",
+        "link": "https://store.steampowered.com/app/752860/Outer_Wilds/",
+        "description": "for best results, go in blind"
+      },
+      {
+        "name": "Rise of Nations",
+        "link": "https://store.steampowered.com/app/8137/Rise_of_Nations/",
+        "description": "one of the last great real-time strategy games"
+      }
+    ]
+  }
+]

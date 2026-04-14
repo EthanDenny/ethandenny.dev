@@ -6,5 +6,9 @@
   {
     "label": "Projects",
     "link": "/projects"
+  },
+  {
+    "label": "Garden",
+    "link": "/garden"
   }
 ]

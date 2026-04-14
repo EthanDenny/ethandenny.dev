@@ -1,7 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import Divider from "../components/Divider.astro";
 
 import "../styles/global.css";
@@ -13,21 +12,11 @@ const { title } = Astro.props;
   <head>
     <BaseHead title={title} />
   </head>
-  <body class="theme-default mx-auto my-8 max-w-[768px] gap-6 px-4">
-    <script is:inline>
-      const themes = ["default", "dark", "pink"];
-
-      if (!themes.includes(localStorage.theme)) {
-        localStorage.theme = "default";
-      }
-
-      document.body.classList.remove("theme-default");
-      document.body.classList.add(`theme-${localStorage.theme}`);
-    </script>
+  <body
+    class="theme-default mx-auto my-8 max-w-[768px] gap-6 bg-[#F1E9D2] px-4 text-slate-800"
+  >
     <Header />
     <Divider />
     <slot />
-    <Divider />
-    <Footer />
   </body>
 </html>

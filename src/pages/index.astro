@@ -1,82 +1,27 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ThemeButton from "../components/ThemeButton.astro";
+import Divider from "../components/Divider.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-
-const musicLink =
-  "https://music.apple.com/ca/playlist/ten-really-good-songs/pl.u-V9D7mX9hBKWDNE7";
-const gamesLink = "https://steamcommunity.com/id/thedenny709";
-const githubLink = "https://github.com/EthanDenny/";
 
 const workLink = "https://www.spellbook.legal/";
 const schoolLink = "https://www.mun.ca/";
-const sandboxLink = "https://github.com/EthanDenny/sandbox";
-const vacLabLink =
-  "https://www.linkedin.com/posts/ethan-denny-709_machinelearning-computerscience-python-activity-7071956327891095552-Awnm";
-const ffRustLink =
-  "https://www.linkedin.com/posts/ethan-denny-709_im-happy-to-share-that-in-addition-to-my-activity-7200540631662772224-JMbU?utm_source=share&utm_medium=member_desktop";
-
-import favouriteMusic from "../data/music.json";
-import friends from "../data/friends.json";
 ---
 
 <BaseLayout title={"Home"}>
-  <div class="flex flex-col gap-4 text-lg">
-    <p>
-      {"I like building"}
-      <a href={githubLink}>software</a>{", listening to"}
-      <a href={musicLink}>music</a>{", and playing"}
-      <a href={gamesLink}>games</a>{"."}
-    </p>
+  <div class="flex flex-col gap-4">
+    <p>I like building software, listening to music, and playing games.</p>
     <p>
       {"Right now, I'm building AI for lawyers as a software developer at"}
       <a href={workLink}>Spellbook</a>{
-        " 💎. Concurrently, I'm pursuing my bachelor's degree in computer science at"
+        " and finishing my bachelor's degree in computer science at"
       }
-      <a href={schoolLink}>MUN</a>{", where I've worked on research related to"}
-      <a href={sandboxLink}>physics & education</a>{","}
-      <a href={ffRustLink}>cryptography</a>{", and"}
-      <a href={vacLabLink}>machine learning</a>{"."}
-    </p>
-    <p>
-      I also host <a href="https://ethandenny.dev/demo-night">Demo Night</a>, a
-      quarterly meet up focused around short talks & demos, by professionals,
-      for professionals.
-    </p>
-    <p class="flex flex-col gap-4">
-      This site is intentionally minimal, but you can change the colour scheme!
-      <div class="flex gap-4">
-        <ThemeButton theme="default" />
-        <ThemeButton theme="dark" />
-        <ThemeButton theme="pink" />
-      </div>
-    </p>
-    <p>
-      Some of my favourite music right now:
-      <div class="flex flex-wrap gap-4">
-        {
-          favouriteMusic.map(({ name, artist, link, cover }) => (
-            <a href={link} title={`"${name}" by ${artist}`}>
-              <img class="w-48" src={cover} alt={name} />
-            </a>
-          ))
-        }
-      </div>
-    </p>
-    <p class="flex flex-col gap-2">
-      <span>Some of my friends also have websites:</span>
-      <ul class="flex flex-col text-lg">
-        {
-          friends.map(({ name, href, spellbook }) => (
-            <li>
-              <a href={href}>{name}</a>
-              {spellbook && (
-                <span title="An esteeemed Spellbook colleague">💎</span>
-              )}
-            </li>
-          ))
-        }
-      </ul>
+      <a href={schoolLink}>MUN</a>. I also host <a
+        href="https://ethandenny.dev/demo-night">Demo Night</a
+      >, an approximately-quarterly meet up focused around short talks & demos,
+      by professionals, for professionals.
     </p>
   </div>
+  <Divider />
+  <Footer />
 </BaseLayout>

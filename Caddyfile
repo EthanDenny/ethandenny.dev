@@ -1,5 +1,4 @@
 :80
-
 root * /usr/share/caddy
 
 # Cache headers for Astro assets
@@ -8,26 +7,16 @@ handle /_astro/* {
 	file_server
 }
 
-# Normalize /demo-night -> /demo-night/
-redir /demo-night /demo-night/ 308
-
-# Proxy /demo-night/ to demo-night.fly.dev
-handle /demo-night/* {
-	uri strip_prefix /demo-night
+handle_path /demo-night/gallery* {
+	rewrite * /gallery{path}
 	reverse_proxy https://demo-night.fly.dev {
-		header_up Host demo-night.fly.dev
-		header_up X-Real-IP {remote_host}
-		header_up X-Forwarded-For {remote_host}
-		header_up X-Forwarded-Proto {scheme}
-		header_up X-Forwarded-Host {host}
-		header_up X-Forwarded-Prefix /demo-night
-		transport http {
-			tls_server_name demo-night.fly.dev
-		}
+		header_down Location /gallery /demo-night/gallery
 	}
 }
+handle_path /demo-night* {
+	reverse_proxy https://demo-night.fly.dev
+}
 
-# Default file server for all other routes
 handle {
 	file_server
 	try_files {path} {path}/ =404

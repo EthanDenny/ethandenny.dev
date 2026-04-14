@@ -1,124 +1,26 @@
 @import "tailwindcss";
 
-@custom-variant default (&:where(.theme-default, .theme-default *));
-@custom-variant dark (&:where(.theme-dark, .theme-dark *));
-@custom-variant pink (&:where(.theme-pink, .theme-pink *));
-
 @theme {
-  --color-default-text: #000000;
-  --color-default-background: #ffffff;
-  --color-default-accent: #0000ff;
-
-  --color-dark-text: #ffffff;
-  --color-dark-background: #000000;
-  --color-dark-accent: var(--color-orange-500);
-
-  --color-pink-text: var(--color-pink-400);
-  --color-pink-background: var(--color-pink-50);
-  --color-pink-accent: var(--color-pink-800);
-
   --font-family-sans: helvetica, sans-serif;
 }
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+
   html,
   body {
     @apply m-0 p-0;
   }
 
-  body {
-    @apply default:bg-default-background;
-    @apply dark:bg-dark-background;
-    @apply pink:bg-pink-background;
-    @apply transition-colors;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  i,
-  li,
-  hr,
-  p {
-    @apply default:text-default-text;
-    @apply dark:text-dark-text;
-    @apply pink:text-pink-text;
-  }
-
-  a {
-    @apply default:text-default-accent;
-    @apply dark:text-dark-accent;
-    @apply pink:text-pink-accent;
-  }
-
-  h1 {
-    @apply text-6xl;
-    @apply font-bold;
-  }
-
-  h2 {
-    @apply text-5xl;
-    @apply font-bold;
-  }
-
-  h3 {
-    @apply text-4xl;
-    @apply font-bold;
-  }
-
-  h4 {
-    @apply text-3xl;
-    @apply font-bold;
-  }
-
-  h5 {
-    @apply text-2xl;
-    @apply font-bold;
-  }
-
-  h6 {
-    @apply text-xl;
-    @apply font-bold;
-  }
-
-  p,
-  .text-block {
-    @apply text-lg;
-  }
-
   a {
     @apply underline;
+    @apply text-[#2E6F40];
   }
 
   li {
     @apply ml-4;
     @apply list-disc;
-  }
-}
-
-@layer components {
-  .post-content h1,
-  .post-content h2,
-  .post-content h3,
-  .post-content h4,
-  .post-content h5,
-  .post-content h6 {
-    @apply my-6;
-  }
-
-  .post-content p {
-    @apply mb-4;
-  }
-
-  .post-content img {
-    @apply mx-auto;
-  }
-
-  .post-content pre:has(> code) {
-    @apply p-3;
-    @apply mb-4;
   }
 }

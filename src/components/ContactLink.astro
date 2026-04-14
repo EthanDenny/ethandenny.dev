@@ -2,11 +2,7 @@
 const { icon: Icon, href, label } = Astro.props;
 ---
 
-<div class="flex gap-x-3 text-lg">
-  <div class="flex min-h-full w-5 items-end pb-0.75">
-    <Icon class="size-5" />
-  </div>
-  <div>
-    <a href={href}>{label}</a>
-  </div>
-</div>
+<a class="flex items-center gap-3" href={href}>
+  <Icon class="size-4.5 text-[#253D2C]" />
+  {label}
+</a>

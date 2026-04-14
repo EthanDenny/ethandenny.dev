@@ -1,29 +1,15 @@
 ---
 import navButtons from "../data/navButtons.json";
 import "../styles/global.css";
-
-const pathname = new URL(Astro.request.url).pathname;
-const firstIndex = pathname.slice(1).indexOf("/");
-const parentPath =
-  firstIndex == -1 ? pathname : pathname.slice(0, firstIndex + 1);
 ---
 
-<header class="flex flex-col gap-4">
-  <h3 class="w-max">ETHAN DENNY</h3>
-  <nav class="flex w-min flex-col flex-wrap items-baseline gap-4">
+<header class="flex flex-col gap-3">
+  <h3 class="text-3xl font-bold text-[#253D2C]">Ethan Denny</h3>
+  <nav class="flex flex-wrap gap-3">
     {
       navButtons.map(({ label, link }) => (
         <div class="flex w-max gap-3">
-          <a class="text-2xl font-bold" href={link}>
-            {label}
-          </a>
-          {parentPath === link && parentPath !== "/" ? (
-            <p class="flex min-h-full items-center text-lg font-medium">
-              &larr; You are here!
-            </p>
-          ) : (
-            <span />
-          )}
+          <a href={link}>{label}</a>
         </div>
       ))
     }

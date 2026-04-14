@@ -1,17 +1,41 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
 import "../../styles/global.css";
+import gardenLinks from "../../data/garden.json";
 ---
 
-<BaseHead title="Digital Garden" />
-
-<body>
-  <h1>My Digital Garden 🌱</h1>
-  <ul>
-    <li><a href="/garden/books">Books</a></li>
-    <li><a href="/garden/movies-and-tv">Movies & TV</a></li>
-    <li><a href="/garden/music">Music</a></li>
-    <li><a href="/garden/podcasts">Podcasts</a></li>
-    <li><a href="/garden/links">Links</a></li>
-  </ul>
-</body>
+<BaseLayout title="Garden">
+  <div class="mb-8 flex w-full flex-col gap-6">
+    <p>Welcome to my garden</p>
+    {
+      gardenLinks.map(({ section, links }) => (
+        <div class="flex w-full">
+          <h5 class="w-20 font-bold">{section}</h5>
+          <div class="flex flex-1 flex-col gap-2">
+            {links.map(
+              ({
+                name,
+                link,
+                description,
+              }: {
+                name: string;
+                link: string;
+                description?: string;
+              }) => (
+                <div class="flex w-full items-baseline justify-between">
+                  <a href={link} rel="noopener noreferrer">
+                    {name}
+                  </a>
+                  {description && (
+                    <span class="text-sm text-slate-500">{description}</span>
+                  )}
+                </div>
+              ),
+            )}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</BaseLayout>
