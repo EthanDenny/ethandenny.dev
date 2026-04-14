@@ -64,7 +64,7 @@
     "links": [
       {
         "name": "Spelunky",
-        "link": "https://news.ycombinator.com",
+        "link": "https://store.steampowered.com/app/239350/Spelunky/",
         "description": "revitalized the roguelike genre"
       },
       {
@@ -74,12 +74,12 @@
       },
       {
         "name": "Nuclear Throne",
-        "link": "https://store.steampowered.com/app/371640/Nuclear_Throne/",
+        "link": "https://store.steampowered.com/app/242680/Nuclear_Throne/",
         "description": "another roguelike, very shooty"
       },
       {
         "name": "Hades",
-        "link": "https://store.steampowered.com/app/1145000/Hades/",
+        "link": "https://store.steampowered.com/app/1145360/Hades/",
         "description": "yet another roguelike :P"
       },
       {
@@ -89,17 +89,17 @@
       },
       {
         "name": "Hollow Knight",
-        "link": "https://store.steampowered.com/app/367500/Hollow_Knight/",
+        "link": "https://store.steampowered.com/app/367520/Hollow_Knight/",
         "description": "beautiful metroidvania about bugs"
       },
       {
         "name": "Outer Wilds",
-        "link": "https://store.steampowered.com/app/752860/Outer_Wilds/",
+        "link": "https://store.steampowered.com/app/753640/Outer_Wilds/",
         "description": "for best results, go in blind"
       },
       {
         "name": "Rise of Nations",
-        "link": "https://store.steampowered.com/app/8137/Rise_of_Nations/",
+        "link": "https://store.steampowered.com/app/287450/Rise_of_Nations_Extended_Edition/",
         "description": "one of the last great real-time strategy games"
       }
     ]
