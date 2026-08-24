@@ -1,0 +1,41 @@
+src/data/skills.json
+  s_ad9cb7a77e76b0::t_1241586c265bc0 7,15,23
+  s_ad9cb7a77e76b0::t_6812c4f4d43421 1-6,8-14,16-22,24-31
+src/pages/skills/[slug].astro
+  s_ad9cb7a77e76b0::t_6812c4f4d43421 3,12
+  s_ad9cb7a77e76b0::t_1241586c265bc0 31,33-37
+  s_ad9cb7a77e76b0::t_c70ff6289b7b77 1-2,4-11,13-17,20-23,25-30,38-41,45-51
+  s_ad9cb7a77e76b0::t_5e928ee5b19cc6 18-19,24,42-44
+  s_ad9cb7a77e76b0::t_5620809cbbf988 32
+public/skills/grilling/SKILL.md
+  s_ad9cb7a77e76b0::t_5ea517557ff5c2 1-28
+public/skills/grilling/agents/openai.yaml
+  s_ad9cb7a77e76b0::t_5ea517557ff5c2 1-3
+public/skills/deslop/SKILL.md
+  s_ad9cb7a77e76b0::t_5ea517557ff5c2 1-22
+public/skills/grill-me/SKILL.md
+  s_ad9cb7a77e76b0::t_5ea517557ff5c2 1-7
+public/skills/thermo-nuclear-code-quality-review/SKILL.md
+  s_ad9cb7a77e76b0::t_e9bdfa45ad4fb5 1-192
+src/pages/garden/index.astro
+  s_ad9cb7a77e76b0::t_6812c4f4d43421 4-6,8-15,17,24
+  s_ad9cb7a77e76b0::t_0256251f263e4c 7,16
+public/skills/grill-me/agents/openai.yaml
+  s_ad9cb7a77e76b0::t_5ea517557ff5c2 1-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "244a26bb29587e6d34de7e7ebef9f6f7aff47d12",
+  "prompts": {},
+  "sessions": {
+    "s_ad9cb7a77e76b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0315b-45a5-7073-87db-67f1bed8e99f",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
