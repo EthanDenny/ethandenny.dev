@@ -1,0 +1,29 @@
+src/components/ContactLink.astro
+  s_ad9cb7a77e76b0::t_d408c2219af155 6
+src/styles/global.css
+  s_ad9cb7a77e76b0::t_d408c2219af155 32
+  s_ad9cb7a77e76b0::t_fa4bd456596e30 4-12,27-31,39-42
+src/components/Header.astro
+  s_ad9cb7a77e76b0::t_d408c2219af155 7
+src/pages/design.astro
+  s_ad9cb7a77e76b0::t_d408c2219af155 72,75,91,94-96,101-102,105-106,113,123,125,130-134,142-143,153,165-166,171-172,182,188,190-191,194-195,202,205-206,213,219-220,222,235-236,238,245-246,250,263-264,266,273-274,276,284,290,294-297,304-306
+  s_ad9cb7a77e76b0::t_fa4bd456596e30 1-71,73-74,76-90,92-93,97-100,103-104,107-112,114-122,124,126-129,135-141,144-152,154-164,167-170,173-181,183-187,189,192-193,196-201,203-204,207-212,214-218,221,223-234,237,239-244,247-249,251-262,265,267-272,275,277-283,285-289,291-293,298-303,307-312
+src/layouts/BaseLayout.astro
+  s_ad9cb7a77e76b0::t_d408c2219af155 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "c31713b45c1778759b73b1a18c5527209fd8868e",
+  "prompts": {},
+  "sessions": {
+    "s_ad9cb7a77e76b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0315b-45a5-7073-87db-67f1bed8e99f",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
