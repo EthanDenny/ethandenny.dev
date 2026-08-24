@@ -1,0 +1,312 @@
+---
+import { Computer } from "@lucide/astro";
+
+import Album from "../components/Album.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Book from "../components/Book.astro";
+import ContactLink from "../components/ContactLink.astro";
+import Divider from "../components/Divider.astro";
+import Footer from "../components/Footer.astro";
+import NewTab from "../components/NewTab.astro";
+
+import music from "../data/music.json";
+
+const colors = [
+  {
+    name: "Canvas",
+    token: "--color-canvas",
+    value: "#F1E9D2",
+    use: "Page background",
+  },
+  {
+    name: "Ink",
+    token: "--color-ink",
+    value: "#1E293B",
+    use: "Body copy",
+  },
+  {
+    name: "Forest",
+    token: "--color-forest",
+    value: "#253D2C",
+    use: "Headings, icons, focus",
+  },
+  {
+    name: "Link",
+    token: "--color-link",
+    value: "#2E6F40",
+    use: "Interactive text",
+  },
+  {
+    name: "Muted",
+    token: "--color-muted",
+    value: "#64748B",
+    use: "Secondary copy",
+  },
+  {
+    name: "Rule",
+    token: "--color-rule",
+    value: "#CBD5E1",
+    use: "Dividers and specimen borders",
+  },
+];
+
+const spacing = [4, 8, 12, 16, 20, 24, 32];
+
+const componentInventory = [
+  ["BaseHead", "Document metadata, favicon, RSS, and icon styles"],
+  ["BaseLayout", "Shared page width, palette, header, and divider"],
+  ["Header", "Site name and data-driven primary navigation"],
+  ["Divider", "Section boundary with consistent vertical space"],
+  ["Footer", "Short introduction to off-site profiles"],
+  ["ContactLink", "Icon and label treatment for profile links"],
+  ["NewTab", "Safe external link wrapper"],
+  ["Book", "Title, author, and optional ownership marker"],
+  ["Album", "Linked square artwork with accessible context"],
+  ["ThemeButton", "Experimental; themes are not yet defined or in use"],
+];
+---
+
+<BaseLayout title="Design">
+  <main class="flex flex-col gap-12 pb-8">
+    <section class="flex flex-col gap-4" aria-labelledby="design-title">
+      <p class="text-muted text-sm font-bold tracking-wider uppercase">
+        Living style guide
+      </p>
+      <h1 id="design-title" class="text-forest text-3xl font-bold">Design</h1>
+      <p class="max-w-[65ch] text-lg leading-7">
+        A working record of the decisions and components behind this site. The
+        goal is a small, legible, content-first system that still feels warm and
+        personal.
+      </p>
+      <nav aria-label="On this page" class="flex flex-wrap gap-x-4 gap-y-2">
+        <a href="#principles">Principles</a>
+        <a href="#foundations">Foundations</a>
+        <a href="#type">Type</a>
+        <a href="#components">Components</a>
+        <a href="#inventory">Inventory</a>
+      </nav>
+    </section>
+
+    <section id="principles" class="flex scroll-mt-4 flex-col gap-4">
+      <h2 class="text-forest text-xl font-bold">Principles</h2>
+      <ol class="flex flex-col gap-3">
+        <li>
+          <strong>Content first.</strong> Decoration supports the writing.
+        </li>
+        <li>
+          <strong>Familiar affordances.</strong> Links look like links and focus
+          remains visible.
+        </li>
+        <li>
+          <strong>Comfortable reading.</strong> Pages stay within 768px with generous
+          vertical rhythm.
+        </li>
+        <li>
+          <strong>Few ingredients.</strong> Reuse the palette, spacing, and components
+          before adding another variation.
+        </li>
+      </ol>
+    </section>
+
+    <section id="foundations" class="flex scroll-mt-4 flex-col gap-6">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-forest text-xl font-bold">Foundations</h2>
+        <p>
+          Tokens live in <code>src/styles/global.css</code>. Colors use semantic
+          names so their purpose survives future palette changes.
+        </p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        {
+          colors.map((color) => (
+            <article class="border-rule flex items-center gap-4 border p-3">
+              <div
+                class="border-rule size-14 shrink-0 border"
+                style={{ backgroundColor: color.value }}
+                aria-hidden="true"
+              />
+              <div class="min-w-0">
+                <h3 class="text-forest font-bold">{color.name}</h3>
+                <p class="text-muted text-sm">{color.use}</p>
+                <code class="text-xs">
+                  {color.token} · {color.value}
+                </code>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <h3 class="text-forest font-bold">Spacing</h3>
+        <p class="text-muted text-sm">
+          Use the 4px scale. The site most often uses 8, 12, 16, 20, 24, and
+          32px gaps.
+        </p>
+        <div class="flex flex-col gap-2">
+          {
+            spacing.map((size) => (
+              <div class="flex items-center gap-3">
+                <code class="w-10 text-xs">{size}px</code>
+                <div
+                  class="bg-forest h-2"
+                  style={{ width: `${size * 4}px` }}
+                  aria-hidden="true"
+                />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <h3 class="text-forest font-bold">Page frame</h3>
+          <p class="text-muted text-sm">
+            768px maximum width, 16px side padding, and 32px vertical margin.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-forest font-bold">Corners and shadows</h3>
+          <p class="text-muted text-sm">
+            Square corners and no shadows. Structure comes from spacing and
+            rules.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="type" class="flex scroll-mt-4 flex-col gap-6">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-forest text-xl font-bold">Typography</h2>
+        <p>
+          Helvetica with Arial and the system sans-serif as fallbacks. Weight,
+          size, and color establish hierarchy without a second typeface.
+        </p>
+      </div>
+      <div class="border-rule flex flex-col gap-6 border-y py-6">
+        <div>
+          <p class="text-forest text-3xl font-bold">Site title</p>
+          <code class="text-muted text-xs">30px / bold / forest</code>
+        </div>
+        <div>
+          <p class="text-forest text-xl font-bold">Section heading</p>
+          <code class="text-muted text-xs">20px / bold / forest</code>
+        </div>
+        <div>
+          <p class="text-base leading-6">
+            Body copy should be direct, readable, and comfortable over several
+            lines. The default size is intentionally ordinary.
+          </p>
+          <code class="text-muted text-xs">16px / regular / ink</code>
+        </div>
+        <div>
+          <p class="text-muted text-sm">Secondary details stay subordinate.</p>
+          <code class="text-muted text-xs">14px / regular / muted</code>
+        </div>
+      </div>
+    </section>
+
+    <section id="components" class="flex scroll-mt-4 flex-col gap-8">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-forest text-xl font-bold">Components</h2>
+        <p>Live specimens use the production components and global styles.</p>
+      </div>
+
+      <article class="flex flex-col gap-3">
+        <div>
+          <h3 class="text-forest font-bold">Links</h3>
+          <p class="text-muted text-sm">Green and underlined by default.</p>
+        </div>
+        <div class="border-rule flex flex-wrap gap-4 border border-dashed p-4">
+          <a href="#components">Internal link</a>
+          <NewTab href="https://example.com">External link</NewTab>
+          <ContactLink
+            icon={Computer}
+            href="https://github.com/EthanDenny"
+            label="Icon link"
+          />
+        </div>
+      </article>
+
+      <article class="flex flex-col gap-3">
+        <div>
+          <h3 class="text-forest font-bold">Divider</h3>
+          <p class="text-muted text-sm">Separates major page regions.</p>
+        </div>
+        <div class="border-rule border border-dashed px-4">
+          <Divider />
+        </div>
+      </article>
+
+      <article class="flex flex-col gap-3">
+        <div>
+          <h3 class="text-forest font-bold">Book</h3>
+          <p class="text-muted text-sm">
+            A list item with an optional owned marker.
+          </p>
+        </div>
+        <div class="border-rule border border-dashed p-4">
+          <Book
+            data={{
+              title: "The Creative Act: A Way of Being",
+              author: "Rick Rubin",
+              owned: true,
+            }}
+          />
+        </div>
+      </article>
+
+      <article class="flex flex-col gap-3">
+        <div>
+          <h3 class="text-forest font-bold">Album</h3>
+          <p class="text-muted text-sm">Linked cover artwork in a square.</p>
+        </div>
+        <div class="border-rule w-32 border border-dashed p-2">
+          <Album data={music[0]} />
+        </div>
+      </article>
+
+      <article class="flex flex-col gap-3">
+        <div>
+          <h3 class="text-forest font-bold">Footer</h3>
+          <p class="text-muted text-sm">Closing profile links.</p>
+        </div>
+        <div class="border-rule border border-dashed p-4">
+          <Footer />
+        </div>
+      </article>
+    </section>
+
+    <section id="inventory" class="flex scroll-mt-4 flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <h2 class="text-forest text-xl font-bold">Component inventory</h2>
+        <p>
+          Everything currently in <code>src/components</code>, including
+          structural pieces that cannot be nested as specimens.
+        </p>
+      </div>
+      <dl class="divide-rule border-rule divide-y border-y">
+        {
+          componentInventory.map(([name, description]) => (
+            <div class="grid gap-1 py-3 sm:grid-cols-[8rem_1fr] sm:gap-4">
+              <dt>
+                <code>{name}</code>
+              </dt>
+              <dd class="text-muted text-sm">{description}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <aside class="border-forest border-l-4 pl-4">
+      <p class="text-forest font-bold">How to use this page</p>
+      <p class="text-muted text-sm">
+        Change shared tokens first, then review every specimen here at mobile
+        and desktop widths before updating individual pages.
+      </p>
+    </aside>
+  </main>
+</BaseLayout>

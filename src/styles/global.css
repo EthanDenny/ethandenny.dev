@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --font-family-sans: helvetica, sans-serif;
+  --font-sans: Helvetica, Arial, sans-serif;
+
+  /* Core site palette. Keep /design in sync when these change. */
+  --color-canvas: #f1e9d2;
+  --color-ink: #1e293b;
+  --color-forest: #253d2c;
+  --color-link: #2e6f40;
+  --color-muted: #64748b;
+  --color-rule: #cbd5e1;
 }
 
 @layer base {
@@ -16,11 +24,20 @@
 
   a {
     @apply underline;
-    @apply text-[#2E6F40];
+    @apply text-link;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-forest outline-2 outline-offset-2;
   }
 
   li {
     @apply ml-4;
     @apply list-disc;
+  }
+
+  hr {
+    @apply border-rule;
   }
 }
