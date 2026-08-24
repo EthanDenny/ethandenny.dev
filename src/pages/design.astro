@@ -1,15 +1,10 @@
 ---
 import { Computer } from "@lucide/astro";
 
-import Album from "../components/Album.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Book from "../components/Book.astro";
 import ContactLink from "../components/ContactLink.astro";
 import Divider from "../components/Divider.astro";
 import Footer from "../components/Footer.astro";
-import NewTab from "../components/NewTab.astro";
-
-import music from "../data/music.json";
 
 const colors = [
   {
@@ -53,16 +48,12 @@ const colors = [
 const spacing = [4, 8, 12, 16, 20, 24, 32];
 
 const componentInventory = [
-  ["BaseHead", "Document metadata, favicon, RSS, and icon styles"],
+  ["BaseHead", "Document metadata, favicon, and RSS discovery"],
   ["BaseLayout", "Shared page width, palette, header, and divider"],
   ["Header", "Site name and data-driven primary navigation"],
   ["Divider", "Section boundary with consistent vertical space"],
   ["Footer", "Short introduction to off-site profiles"],
   ["ContactLink", "Icon and label treatment for profile links"],
-  ["NewTab", "Safe external link wrapper"],
-  ["Book", "Title, author, and optional ownership marker"],
-  ["Album", "Linked square artwork with accessible context"],
-  ["ThemeButton", "Experimental; themes are not yet defined or in use"],
 ];
 ---
 
@@ -221,7 +212,13 @@ const componentInventory = [
         </div>
         <div class="border-rule flex flex-wrap gap-4 border border-dashed p-4">
           <a href="#components">Internal link</a>
-          <NewTab href="https://example.com">External link</NewTab>
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            External link
+          </a>
           <ContactLink
             icon={Computer}
             href="https://github.com/EthanDenny"
@@ -242,34 +239,6 @@ const componentInventory = [
 
       <article class="flex flex-col gap-3">
         <div>
-          <h3 class="text-forest font-bold">Book</h3>
-          <p class="text-muted text-sm">
-            A list item with an optional owned marker.
-          </p>
-        </div>
-        <div class="border-rule border border-dashed p-4">
-          <Book
-            data={{
-              title: "The Creative Act: A Way of Being",
-              author: "Rick Rubin",
-              owned: true,
-            }}
-          />
-        </div>
-      </article>
-
-      <article class="flex flex-col gap-3">
-        <div>
-          <h3 class="text-forest font-bold">Album</h3>
-          <p class="text-muted text-sm">Linked cover artwork in a square.</p>
-        </div>
-        <div class="border-rule w-32 border border-dashed p-2">
-          <Album data={music[0]} />
-        </div>
-      </article>
-
-      <article class="flex flex-col gap-3">
-        <div>
           <h3 class="text-forest font-bold">Footer</h3>
           <p class="text-muted text-sm">Closing profile links.</p>
         </div>
@@ -283,7 +252,7 @@ const componentInventory = [
       <div class="flex flex-col gap-2">
         <h2 class="text-forest text-xl font-bold">Component inventory</h2>
         <p>
-          Everything currently in <code>src/components</code>, including
+          Everything currently in <code>src/components</code>, including the
           structural pieces that cannot be nested as specimens.
         </p>
       </div>
