@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import skills from "../../data/skills.json";
+
+export function getStaticPaths() {
+  return skills.map((skill) => ({
+    params: { slug: skill.slug },
+    props: { skill },
+  }));
+}
+
+const { skill } = Astro.props as { skill: (typeof skills)[number] };
+---
+
+<BaseLayout title={skill.name}>
+  <main class="flex flex-col gap-8 pb-8">
+    <div class="flex flex-col gap-3">
+      <p class="text-muted text-sm"><a href="/garden">Garden</a> / Skills</p>
+      <h1 class="text-forest text-3xl font-bold">{skill.name}</h1>
+      <p class="max-w-[65ch] text-lg leading-7">{skill.description}</p>
+    </div>
+
+    <section class="flex flex-col gap-3" aria-labelledby="files-heading">
+      <h2 id="files-heading" class="text-forest text-xl font-bold">
+        Required files
+      </h2>
+      <p>
+        Copy every file below into <code>~/.codex/skills</code>, preserving the
+        directory structure shown. These are manually maintained snapshots.
+      </p>
+      <a
+        class="border-forest bg-forest text-canvas w-max border px-3 py-2 font-bold no-underline"
+        href={skill.download}
+        download
+      >
+        Download all
+      </a>
+      <ul class="flex flex-col gap-2">
+        {
+          skill.files.map((file) => (
+            <li>
+              <a href={`/skills/${file}`}>
+                <code>{file}</code>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</BaseLayout>

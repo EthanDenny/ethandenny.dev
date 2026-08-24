@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "deslop",
+    "name": "Deslop",
+    "description": "Remove AI-generated code slop and clean up code style.",
+    "gardenDescription": "remove AI-generated code slop",
+    "download": "/skills/deslop.zip",
+    "files": ["deslop/SKILL.md"]
+  },
+  {
+    "slug": "thermo-nuclear-code-quality-review",
+    "name": "Thermo-Nuclear Code Quality Review",
+    "description": "Run an extremely strict maintainability review focused on structure, abstraction quality, and codebase health.",
+    "gardenDescription": "an unforgiving maintainability audit",
+    "download": "/skills/thermo-nuclear-code-quality-review.zip",
+    "files": ["thermo-nuclear-code-quality-review/SKILL.md"]
+  },
+  {
+    "slug": "grill-me",
+    "name": "Grill Me",
+    "description": "Sharpen a plan or design through a relentless interview.",
+    "gardenDescription": "sharpen a plan through relentless interview",
+    "download": "/skills/grill-me.zip",
+    "files": [
+      "grill-me/SKILL.md",
+      "grill-me/agents/openai.yaml",
+      "grilling/SKILL.md",
+      "grilling/agents/openai.yaml"
+    ]
+  }
+]

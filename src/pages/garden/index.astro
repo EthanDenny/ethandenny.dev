@@ -1,13 +1,27 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import gardenLinks from "../../data/garden.json";
+import skills from "../../data/skills.json";
+
+const sections = [
+  ...gardenLinks.slice(0, 1),
+  {
+    section: "Skills",
+    links: skills.map(({ slug, name, gardenDescription }) => ({
+      name,
+      link: `/skills/${slug}`,
+      description: gardenDescription,
+    })),
+  },
+  ...gardenLinks.slice(1),
+];
 ---
 
 <BaseLayout title="Garden">
   <div class="mb-8 flex w-full flex-col gap-6">
     <p>Welcome to my garden</p>
     {
-      gardenLinks.map(({ section, links }) => (
+      sections.map(({ section, links }) => (
         <div class="flex w-full">
           <h5 class="w-20 font-bold">{section}</h5>
           <div class="flex flex-1 flex-col gap-2">
