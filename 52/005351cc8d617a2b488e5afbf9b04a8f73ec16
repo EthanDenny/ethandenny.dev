@@ -1,0 +1,27 @@
+astro.config.mjs
+  s_ad9cb7a77e76b0::t_2fbbf9e95fb21a 9
+src/pages/design.astro
+  s_ad9cb7a77e76b0::t_7f79b2d755006b 51
+  s_ad9cb7a77e76b0::t_dc674dad2b7d84 215-221,255
+package.json
+  s_ad9cb7a77e76b0::t_e89c45363649fe 8
+  s_ad9cb7a77e76b0::t_83ceda9b327c4c 18
+src/layouts/BaseLayout.astro
+  s_ad9cb7a77e76b0::t_2fbbf9e95fb21a 15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "52005351cc8d617a2b488e5afbf9b04a8f73ec16",
+  "prompts": {},
+  "sessions": {
+    "s_ad9cb7a77e76b0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0315b-45a5-7073-87db-67f1bed8e99f",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
