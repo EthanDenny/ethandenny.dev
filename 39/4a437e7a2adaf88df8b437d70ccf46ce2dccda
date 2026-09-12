@@ -1,0 +1,95 @@
+src/components/Footer.astro
+  s_13f18716b4aad2::t_632c25b848e04d 3-5
+src/pages/resume.astro
+  s_13f18716b4aad2::t_632c25b848e04d 2-4
+  s_8e82bf907c3b6a::t_c4bdf444dc451a 6-8,11-32,34-83,85,87-100,103-138,140-144,146-148,153-155,158-160,164-166,168-172,175-177,182-186,188,190-192,196-198,201-207,209-223,227-229,233-255,257-261,263-273,275-322,325-327
+  s_8e82bf907c3b6a::t_710787018d2bfb 145,149-152,156-157,161-163,167,173-174,178-181,187,189,193-195,199-200,208,224-226,230-232,256,262,274,323-324
+  s_8e82bf907c3b6a::t_7ae603709f45ea 101-102
+  s_8e82bf907c3b6a::t_a6285431468c30 84
+  s_8e82bf907c3b6a::t_7c1e27e2768817 86
+src/pages/index.astro
+  s_13f18716b4aad2::t_9a217f0a911ac8 20
+  s_13f18716b4aad2::t_5ec21bab596674 15,50
+  s_13f18716b4aad2::t_6c8adcb245e0f7 8,26
+  s_13f18716b4aad2::t_c7e9c5bc75999d 22-23
+  s_13f18716b4aad2::t_a2f7837f6f42f3 12
+  s_13f18716b4aad2::t_6bf8333fcbb60a 30
+  s_13f18716b4aad2::t_410837bd350eef 13
+  s_13f18716b4aad2::t_e55f0e58d6057c 21,24
+  s_13f18716b4aad2::t_322129ece05167 6
+  s_13f18716b4aad2::t_0360a73d9d0d02 25
+  s_13f18716b4aad2::t_eea31edc28435c 17-19
+  s_13f18716b4aad2::t_dc4a3aa58097e9 35
+  s_13f18716b4aad2::t_bf67dfb11f2c5a 14
+  s_13f18716b4aad2::t_4e3eb50f3b4463 3-4,9,27-29,31-34,36-49,51-62
+  s_13f18716b4aad2::t_1de5bed6cf0494 16
+src/components/ContactLink.astro
+  s_13f18716b4aad2::t_9c60ef69f8e47b 6
+src/styles/global.css
+  s_13f18716b4aad2::t_9c60ef69f8e47b 10
+  s_13f18716b4aad2::t_dd393c4b87bb86 7
+src/components/Header.astro
+  s_13f18716b4aad2::t_3737d3d2fe109b 1,3,5
+  s_13f18716b4aad2::t_67db1e1af8d4b5 6-8
+  s_13f18716b4aad2::t_410837bd350eef 2
+src/pages/skills/[slug].astro
+  s_13f18716b4aad2::t_bc64adc53300c9 18
+src/components/BaseHead.astro
+  s_13f18716b4aad2::t_a2f7837f6f42f3 3,16
+src/data/writing.json
+  s_13f18716b4aad2::t_71d3bd30ce8153 3-5
+src/data/resume.json
+  s_8e82bf907c3b6a::t_c4bdf444dc451a 1-26,28-88
+  s_13f18716b4aad2::t_322129ece05167 27
+src/data/projects.json
+  s_13f18716b4aad2::t_5f8c387903ced7 6-8,13-15
+  s_13f18716b4aad2::t_c6e22cad2bc29b 40
+  s_13f18716b4aad2::t_fb3cf57e6474c8 47
+  s_13f18716b4aad2::t_fa51f6b2c0c148 20-21
+  s_13f18716b4aad2::t_086cfaf689631c 27-28
+  s_13f18716b4aad2::t_b58f3b63284341 22
+  s_13f18716b4aad2::t_2d80d02e799a55 29
+  s_13f18716b4aad2::t_b74289a8ed3ae3 39
+  s_13f18716b4aad2::t_c655b5444647b2 41
+  s_13f18716b4aad2::t_074166603bb488 46
+  s_13f18716b4aad2::t_2e68c57c190ba3 48
+  s_48f0f2779f10ef::t_65e1afb9e36991 36
+src/pages/design.astro
+  s_13f18716b4aad2::t_632c25b848e04d 2
+public/favicon.svg
+  s_13f18716b4aad2::t_d704901125a218 1-3
+public/ethan-denny-resume.pdf
+  s_8e82bf907c3b6a::t_1b96977e5ea3d8 1-154
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "394a437e7a2adaf88df8b437d70ccf46ce2dccda",
+  "prompts": {},
+  "sessions": {
+    "s_13f18716b4aad2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a09683-ade2-7153-af1c-9b1e524212ad",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    },
+    "s_48f0f2779f10ef": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a096b3-18ae-7692-9f23-1338db641483",
+        "model": "unknown"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    },
+    "s_8e82bf907c3b6a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0456a-5aa7-7362-9cc2-d204d69c96fc",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
