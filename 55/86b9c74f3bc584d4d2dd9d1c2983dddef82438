@@ -1,0 +1,19 @@
+src/pages/writing/[...slug].astro
+  s_13f18716b4aad2::t_d7fa13a27ba2cb 26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "5586b9c74f3bc584d4d2dd9d1c2983dddef82438",
+  "prompts": {},
+  "sessions": {
+    "s_13f18716b4aad2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a09683-ade2-7153-af1c-9b1e524212ad",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
