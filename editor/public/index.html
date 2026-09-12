@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>writing editor</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" type="module"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>writing editor</h1>
+        <p>local only</p>
+      </div>
+      <div class="topbar-actions">
+        <span id="status" role="status">loading…</span>
+        <button id="save" class="primary" type="submit" form="post-form">
+          save
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <aside>
+        <div class="aside-heading">
+          <h2>posts</h2>
+          <button id="new-post" type="button">new post</button>
+        </div>
+        <nav id="posts" aria-label="Posts"></nav>
+      </aside>
+
+      <section class="workspace">
+        <form id="post-form">
+          <div class="metadata">
+            <label class="title-field">
+              <span>title</span>
+              <input id="title" name="title" required maxlength="200" />
+            </label>
+            <label>
+              <span>slug</span>
+              <input
+                id="slug"
+                name="slug"
+                required
+                pattern="[a-z0-9]+(?:-[a-z0-9]+)*"
+              />
+            </label>
+            <label>
+              <span>date</span>
+              <input id="date" name="date" type="date" required />
+            </label>
+          </div>
+
+          <label class="body-field">
+            <span>markdown</span>
+            <textarea id="body" name="body" spellcheck="true"></textarea>
+          </label>
+        </form>
+
+        <section class="preview-section">
+          <div class="preview-heading">
+            <h2>preview</h2>
+            <div>
+              <button id="refresh-preview" type="button">refresh</button>
+              <a
+                id="open-preview"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                open ↗
+              </a>
+            </div>
+          </div>
+          <iframe id="preview" title="Post preview"></iframe>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <button id="delete-post" class="danger" type="button" hidden>
+        delete post
+      </button>
+      <span><kbd>⌘</kbd> <kbd>s</kbd> to save</span>
+    </footer>
+  </body>
+</html>

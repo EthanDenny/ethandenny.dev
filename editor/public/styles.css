@@ -1,0 +1,296 @@
+:root {
+  color: #1e293b;
+  background: #f8fafc;
+  font-family: Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  color: inherit;
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.4rem;
+  background: white;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+}
+
+button:hover {
+  border-color: #c0266d;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #c0266d;
+  outline-offset: 2px;
+}
+
+.topbar {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: rgb(255 255 255 / 92%);
+  padding: 0.75rem 1rem;
+  backdrop-filter: blur(12px);
+}
+
+.topbar h1,
+.topbar p,
+h2 {
+  margin: 0;
+}
+
+.topbar h1 {
+  color: #000;
+  font-size: 1.25rem;
+}
+
+.topbar p,
+#status,
+footer {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.topbar-actions,
+.aside-heading,
+.preview-heading,
+.preview-heading div,
+footer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#status[data-kind="dirty"] {
+  color: #a16207;
+}
+
+#status[data-kind="error"] {
+  color: #b91c1c;
+}
+
+#status[data-kind="success"] {
+  color: #15803d;
+}
+
+.primary {
+  border-color: #c0266d;
+  background: #c0266d;
+  color: white;
+  font-weight: 700;
+}
+
+.primary:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  min-height: calc(100vh - 7.5rem);
+}
+
+aside {
+  border-right: 1px solid #e2e8f0;
+  background: white;
+  padding: 1rem;
+}
+
+.aside-heading,
+.preview-heading {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #000;
+  font-size: 1rem;
+}
+
+#posts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+#posts button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-color: transparent;
+  text-align: left;
+}
+
+#posts button:hover,
+#posts button.selected {
+  border-color: #fbcfe8;
+  background: #fdf2f8;
+}
+
+#posts strong {
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#posts time {
+  margin-top: 0.2rem;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(20rem, 1fr) minmax(20rem, 1fr);
+  gap: 1rem;
+  min-width: 0;
+  padding: 1rem;
+}
+
+#post-form,
+.preview-section {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.metadata {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, 0.65fr) 9rem;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+label span {
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+input,
+textarea,
+iframe {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.4rem;
+  background: white;
+}
+
+input,
+textarea {
+  padding: 0.65rem;
+}
+
+.body-field {
+  flex: 1;
+}
+
+textarea {
+  min-height: 35rem;
+  flex: 1;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.preview-heading {
+  min-height: 2rem;
+}
+
+.preview-heading a {
+  color: #c0266d;
+}
+
+.preview-heading a[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+iframe {
+  width: 100%;
+  min-height: 38.25rem;
+  flex: 1;
+}
+
+footer {
+  justify-content: space-between;
+  min-height: 3rem;
+  border-top: 1px solid #e2e8f0;
+  background: white;
+  padding: 0.5rem 1rem;
+}
+
+.danger {
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+kbd {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.25rem;
+  background: #f8fafc;
+  padding: 0.1rem 0.25rem;
+}
+
+@media (max-width: 1000px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    border-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .metadata {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-actions {
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    gap: 0.25rem;
+  }
+}
