@@ -6,7 +6,6 @@ import projects from "../data/projects.json";
 const workLink = "https://www.spellbook.com/";
 const schoolLink = "https://www.mun.ca/";
 const demoNightLink = "https://demo-night.fly.dev";
-const projectLinks = projects.flatMap(({ links }) => links);
 const writing = (await getCollection("writing")).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime(),
 );
@@ -33,7 +32,7 @@ const writing = (await getCollection("writing")).sort(
       <h4 class="text-lg font-bold">Favourite projects</h4>
       <div class="flex flex-col gap-2">
         {
-          projectLinks.map(({ name, description, link }) => (
+          projects.map(({ name, description, link }) => (
             <div class="flex w-full items-baseline justify-between gap-4">
               <a href={link} target="_blank" rel="noopener noreferrer">
                 {name}

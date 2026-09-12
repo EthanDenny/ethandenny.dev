@@ -3,7 +3,7 @@
 @theme {
   --font-sans: Helvetica, Arial, sans-serif;
 
-  /* Core site palette. Keep /design in sync when these change. */
+  /* Core site palette. */
   --color-canvas: #ffffff;
   --color-ink: #1e293b;
   --color-forest: #000000;
@@ -44,9 +44,5 @@
   li {
     @apply ml-4;
     @apply list-disc;
-  }
-
-  hr {
-    @apply border-rule;
   }
 }

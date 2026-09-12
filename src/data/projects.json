@@ -1,54 +1,32 @@
 [
   {
-    "year": 2025,
-    "links": [
-      {
-        "name": "Fitness",
-        "description": "tracking my progress",
-        "link": "https://fitness.ethandenny.dev/",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "Faces",
-        "description": "little guy generator",
-        "link": "https://faces.ethandenny.dev/",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "To Boldly Go",
-        "description": "the history of human spaceflight",
-        "link": "https://github.com/EthanDenny/to-boldly-go",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "Undergrad Thesis",
-        "description": "modelling physics problems on an augmented reality sandbox",
-        "link": "https://davechurchill.ca/publications/pdf/theses/EthanDenny_Thesis_Honours.pdf",
-        "wip": false,
-        "hidden": false
-      }
-    ]
+    "name": "Fitness",
+    "description": "tracking my progress",
+    "link": "https://fitness.ethandenny.dev/"
   },
   {
-    "year": 2024,
-    "links": [
-      {
-        "name": "Connect2",
-        "description": "hackathon project for 2d social media",
-        "link": "https://github.com/EthanDenny/do-it-hackathon",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "Pixelz",
-        "description": "falling sand game",
-        "link": "https://pixelz.ethandenny.dev/",
-        "wip": false,
-        "hidden": false
-      }
-    ]
+    "name": "Faces",
+    "description": "little guy generator",
+    "link": "https://faces.ethandenny.dev/"
+  },
+  {
+    "name": "To Boldly Go",
+    "description": "the history of human spaceflight",
+    "link": "https://github.com/EthanDenny/to-boldly-go"
+  },
+  {
+    "name": "Undergrad Thesis",
+    "description": "modelling physics problems on an augmented reality sandbox",
+    "link": "https://davechurchill.ca/publications/pdf/theses/EthanDenny_Thesis_Honours.pdf"
+  },
+  {
+    "name": "Connect2",
+    "description": "hackathon project for 2d social media",
+    "link": "https://github.com/EthanDenny/do-it-hackathon"
+  },
+  {
+    "name": "Pixelz",
+    "description": "falling sand game",
+    "link": "https://pixelz.ethandenny.dev/"
   }
 ]
