@@ -1,12 +1,15 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import projects from "../data/projects.json";
-import writing from "../data/writing.json";
 
 const workLink = "https://www.spellbook.com/";
 const schoolLink = "https://www.mun.ca/";
 const demoNightLink = "https://demo-night.fly.dev";
 const projectLinks = projects.flatMap(({ links }) => links);
+const writing = (await getCollection("writing")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
 ---
 
 <BaseLayout>
@@ -50,10 +53,15 @@ const projectLinks = projects.flatMap(({ links }) => links);
       <h4 class="text-lg font-bold">Writing</h4>
       <div class="flex flex-col gap-2">
         {
-          writing.map(({ name, link, date }) => (
+          writing.map(({ id, data }) => (
             <div class="flex w-full items-baseline justify-between gap-4">
-              <a href={link}>{name}</a>
-              <span class="text-right text-sm text-slate-500">{date}</span>
+              <a href={`/writing/${id}`}>{data.title}</a>
+              <time
+                class="text-right text-sm text-slate-500"
+                datetime={data.date.toISOString()}
+              >
+                {data.date.toISOString().slice(0, 10)}
+              </time>
             </div>
           ))
         }
