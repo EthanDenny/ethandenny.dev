@@ -1,0 +1,38 @@
+editor/server.mjs
+  s_13f18716b4aad2::t_246cc97e29868b 93,101,105-106,339,345-347,350-356,375-377,430-431,437-439,441-446,449-454
+  s_13f18716b4aad2::t_a3187e6b77f24f 1-18,20-34,37-38,41-43,54-62,65-92,95-100,102,107-171,185-188,192-262,266-338,357-374,448,455-467
+  s_13f18716b4aad2::t_f330f368459b77 39-40,44-46,48-53
+  s_13f18716b4aad2::t_c93be21145e34c 19,35-36,47,63-64
+  s_13f18716b4aad2::t_44889d12fa16fd 94,104,172-184
+  s_13f18716b4aad2::t_5b9d70b0dd973b 103
+  s_13f18716b4aad2::t_8166411c0bd2f6 189-191,263-265
+  s_13f18716b4aad2::t_2f5a50001a938e 340-344,348-349,378-429,432-436,440,447
+package.json
+  s_13f18716b4aad2::t_a3187e6b77f24f 7
+editor/public/index.html
+  s_13f18716b4aad2::t_a3187e6b77f24f 1-65,72-88
+  s_13f18716b4aad2::t_8166411c0bd2f6 66-71
+editor/public/styles.css
+  s_13f18716b4aad2::t_a3187e6b77f24f 1-296
+editor/public/app.js
+  s_13f18716b4aad2::t_a3187e6b77f24f 1-139,142-224,231-254
+  s_13f18716b4aad2::t_8166411c0bd2f6 140-141,225-230
+README.md
+  s_13f18716b4aad2::t_a3187e6b77f24f 4-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3362dc965dae6c54d9b75942d44fe11253e180c9",
+  "prompts": {},
+  "sessions": {
+    "s_13f18716b4aad2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a09683-ade2-7153-af1c-9b1e524212ad",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
