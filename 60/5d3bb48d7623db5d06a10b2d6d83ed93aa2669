@@ -1,0 +1,29 @@
+src/pages/writing/[...slug].astro
+  s_13f18716b4aad2::t_8288ef1035cd66 2,10,20
+  s_13f18716b4aad2::t_38cf6248388910 3-4,7,9,11-13,15-16,19,23,25
+src/pages/index.astro
+  s_13f18716b4aad2::t_8288ef1035cd66 56,58
+  s_13f18716b4aad2::t_38cf6248388910 2,10-12,59-64
+src/content.config.ts
+  s_13f18716b4aad2::t_8288ef1035cd66 1-16
+src/content/writing/how-to-get-a-job.md
+  s_13f18716b4aad2::t_38cf6248388910 1-27
+package-lock.json
+  s_13f18716b4aad2::t_8c56fef28004a3 2125-2178
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "605d3bb48d7623db5d06a10b2d6d83ed93aa2669",
+  "prompts": {},
+  "sessions": {
+    "s_13f18716b4aad2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a09683-ade2-7153-af1c-9b1e524212ad",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
