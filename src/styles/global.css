@@ -4,10 +4,10 @@
   --font-sans: Helvetica, Arial, sans-serif;
 
   /* Core site palette. Keep /design in sync when these change. */
-  --color-canvas: #f1e9d2;
+  --color-canvas: #ffffff;
   --color-ink: #1e293b;
   --color-forest: #253d2c;
-  --color-link: #2e6f40;
+  --color-link: #c0266d;
   --color-muted: #64748b;
   --color-rule: #cbd5e1;
 }

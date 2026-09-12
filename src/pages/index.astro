@@ -1,26 +1,63 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Divider from "../components/Divider.astro";
-import Footer from "../components/Footer.astro";
+import projects from "../data/projects.json";
+import writing from "../data/writing.json";
 
-const workLink = "https://www.spellbook.legal/";
+const workLink = "https://www.spellbook.com/";
 const schoolLink = "https://www.mun.ca/";
+const demoNightLink = "https://ethandenny.dev/demo-night";
+const projectLinks = projects.flatMap(({ links }) => links);
 ---
 
-<BaseLayout title={"Home"}>
-  <div class="flex flex-col gap-4">
-    <p>I like building software, listening to music, and playing games.</p>
-    <p>
-      {"Right now, I'm building AI for lawyers as a software developer at"}
-      <a href={workLink}>Spellbook</a>{
-        " and finishing my bachelor's degree in computer science at"
-      }
-      <a href={schoolLink}>MUN</a>. I also host <a
-        href="https://ethandenny.dev/demo-night">Demo Night</a
-      >, an approximately-quarterly meet up focused around short talks & demos,
-      by professionals, for professionals.
-    </p>
-  </div>
-  <Divider />
-  <Footer />
+<BaseLayout>
+  <main class="flex flex-col gap-8 lowercase">
+    <section id="now" class="flex scroll-mt-8 flex-col gap-4">
+      <h4 class="text-lg font-bold">Now</h4>
+      <div class="flex flex-col gap-2">
+        <p>
+          building the future of contracts at <a href={workLink}>spellbook</a>
+        </p>
+        <p>hosting <a href={demoNightLink}>demo nights</a> in st. john's</p>
+        <p>
+          just graduated from <a href={schoolLink}>mun</a> with my bachelors in computer
+          science
+        </p>
+        <p>canadian 🇨🇦</p>
+      </div>
+    </section>
+
+    <section id="projects" class="flex scroll-mt-8 flex-col gap-4">
+      <h4 class="text-lg font-bold">Favourite projects</h4>
+      <div class="flex flex-col gap-2">
+        {
+          projectLinks.map(({ name, description, link }) => (
+            <div class="flex w-full items-baseline justify-between gap-4">
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                {name}
+              </a>
+              {description && (
+                <span class="text-right text-sm text-slate-500">
+                  {description}
+                </span>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="writing" class="flex scroll-mt-8 flex-col gap-4">
+      <h4 class="text-lg font-bold">Writing</h4>
+      <div class="flex flex-col gap-2">
+        {
+          writing.map(({ name, link, date }) => (
+            <div class="flex w-full items-baseline justify-between gap-4">
+              <a href={link}>{name}</a>
+              <span class="text-right text-sm text-slate-500">{date}</span>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </main>
 </BaseLayout>

@@ -1,0 +1,327 @@
+---
+import Download from "@lucide/astro/icons/download";
+import ExternalLink from "@lucide/astro/icons/external-link";
+import Mail from "@lucide/astro/icons/mail";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import resume from "../data/resume.json";
+
+const pdfUrl = "/ethan-denny-resume.pdf";
+---
+
+<BaseLayout title="Resume">
+  <main class="resume-page">
+    <section class="resume-intro" aria-labelledby="resume-title">
+      <div>
+        <p class="resume-kicker">Résumé · Updated August 2026</p>
+        <h1 id="resume-title">Work that makes AI useful.</h1>
+        <p>
+          I build product-minded software across AI, interfaces, and systems —
+          currently for lawyers at Spellbook.
+        </p>
+      </div>
+      <a class="resume-download" href={pdfUrl} download>
+        <Download size={20} aria-hidden="true" />
+        Download PDF
+      </a>
+    </section>
+
+    <article class="resume-sheet" aria-label={`${resume.name}'s resume`}>
+      <header class="resume-header">
+        <div>
+          <h2>{resume.name}</h2>
+          <p>{resume.headline}</p>
+        </div>
+        <div class="resume-contact" aria-label="Contact information">
+          <span>{resume.location}</span>
+          <a href={`mailto:${resume.email}`}>
+            <Mail size={13} aria-hidden="true" />
+            {resume.email}
+          </a>
+          <a href={`https://${resume.website}`}>
+            {resume.website}<ExternalLink size={12} aria-hidden="true" />
+          </a>
+          <a href={`https://${resume.github}`}>
+            {resume.github}<ExternalLink size={12} aria-hidden="true" />
+          </a>
+          <a href={`https://www.${resume.linkedin}`}>
+            {resume.linkedin}<ExternalLink size={12} aria-hidden="true" />
+          </a>
+        </div>
+      </header>
+
+      <p class="resume-summary">{resume.summary}</p>
+
+      <section class="resume-section" aria-labelledby="skills-heading">
+        <h3 id="skills-heading">Skills</h3>
+        <div class="skills-list">
+          {
+            resume.skills.map(({ label, items }) => (
+              <p>
+                <strong>{label}:</strong> {items}
+              </p>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="resume-section" aria-labelledby="experience-heading">
+        <h3 id="experience-heading">Experience</h3>
+        <div class="resume-entries">
+          {
+            resume.experience.map((entry) => (
+              <section class="resume-entry">
+                <header>
+                  <div>
+                    <h4>
+                      <a href={entry.companyUrl}>{entry.company}</a>
+                      <span> / {entry.role}</span>
+                    </h4>
+                    <p>{entry.location}</p>
+                  </div>
+                  <time>{entry.dates}</time>
+                </header>
+                <ul>
+                  {entry.bullets.map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+              </section>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="resume-section" aria-labelledby="education-heading">
+        <h3 id="education-heading">Education</h3>
+        <section class="resume-entry education-entry">
+          <header>
+            <div>
+              <h4>
+                <a href={resume.education.schoolUrl}
+                  >{resume.education.school}</a
+                >
+              </h4>
+              <p>{resume.education.degree}</p>
+            </div>
+            <time>{resume.education.dates}</time>
+          </header>
+          <ul>
+            {resume.education.details.map((detail) => <li>{detail}</li>)}
+          </ul>
+        </section>
+      </section>
+
+      <section class="resume-section" aria-labelledby="projects-heading">
+        <h3 id="projects-heading">Projects & Leadership</h3>
+        <div class="project-entries">
+          {
+            resume.projects.map((project) => (
+              <p>
+                <strong>
+                  <a href={project.url}>{project.name}</a> —
+                </strong>
+                {project.description}
+              </p>
+            ))
+          }
+        </div>
+      </section>
+
+      <section
+        class="resume-section recognition"
+        aria-labelledby="recognition-heading"
+      >
+        <h3 id="recognition-heading">Recognition</h3>
+        <p>{resume.recognition.join(" · ")}</p>
+      </section>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .resume-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .resume-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .resume-kicker {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+  }
+
+  .resume-intro h1 {
+    color: var(--color-forest);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .resume-intro p:last-child {
+    max-width: 42rem;
+  }
+
+  .resume-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 700;
+  }
+
+  .resume-sheet {
+    border-top: 1px solid var(--color-rule);
+    padding-top: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .resume-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .resume-header h2 {
+    color: var(--color-forest);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .resume-header > div:first-child p {
+    margin-top: 0.25rem;
+    color: var(--color-muted);
+  }
+
+  .resume-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .resume-contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .resume-summary {
+    margin-top: 1rem;
+  }
+
+  .resume-section {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .resume-section > h3 {
+    color: var(--color-forest);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.16rem;
+  }
+
+  .resume-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 1.05rem;
+  }
+
+  .resume-entry header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .resume-entry h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .resume-entry h4 span,
+  .resume-entry header p {
+    color: var(--color-muted);
+    font-weight: 500;
+  }
+
+  .resume-entry header p {
+    margin-top: 0.08rem;
+    font-size: 0.78rem;
+  }
+
+  .resume-entry time {
+    flex: none;
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .resume-entry ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-top: 0.45rem;
+  }
+
+  .resume-entry li {
+    margin-left: 1rem;
+    padding-left: 0.15rem;
+  }
+
+  .project-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .project-entries strong {
+    margin-right: 0.25rem;
+  }
+
+  .recognition p {
+    font-size: 0.86rem;
+  }
+
+  @media (max-width: 700px) {
+    .resume-header,
+    .resume-section {
+      grid-template-columns: 1fr;
+    }
+
+    .resume-download {
+      justify-self: start;
+    }
+
+    .resume-contact {
+      align-items: flex-start;
+    }
+
+    .resume-section {
+      gap: 0.7rem;
+    }
+
+    .resume-section > h3 {
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid var(--color-rule);
+    }
+  }
+</style>

@@ -15,7 +15,7 @@ const { skill } = Astro.props as { skill: (typeof skills)[number] };
 <BaseLayout title={skill.name}>
   <main class="flex flex-col gap-8 pb-8">
     <div class="flex flex-col gap-3">
-      <p class="text-muted text-sm"><a href="/garden">Garden</a> / Skills</p>
+      <p class="text-muted text-sm"><a href="/">Home</a> / Skills</p>
       <h1 class="text-forest text-3xl font-bold">{skill.name}</h1>
       <p class="max-w-[65ch] text-lg leading-7">{skill.description}</p>
     </div>

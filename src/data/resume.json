@@ -1,0 +1,88 @@
+{
+  "name": "Ethan Denny",
+  "headline": "Software developer building dependable AI products",
+  "location": "St. John's, Newfoundland and Labrador, Canada",
+  "email": "me@ethandenny.dev",
+  "website": "ethandenny.dev",
+  "github": "github.com/EthanDenny",
+  "linkedin": "linkedin.com/in/ethan-denny-709",
+  "summary": "Product-minded software engineer building production agentic AI at Spellbook. Experienced in shipping user-facing features, evaluating model behaviour, and turning ambiguous workflows into reliable software across product, AI, and systems boundaries.",
+  "skills": [
+    {
+      "label": "Languages",
+      "items": "TypeScript, Python, C++, Rust, Go"
+    },
+    {
+      "label": "Product & AI",
+      "items": "React, LLM-powered products, agentic workflows, evaluations, prompt design"
+    },
+    {
+      "label": "Systems",
+      "items": "REST APIs, data pipelines, Git, Linux"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Spellbook",
+      "companyUrl": "https://www.spellbook.com/",
+      "role": "Software Developer",
+      "location": "St. John's, NL · Remote",
+      "dates": "2024 — Present",
+      "bullets": [
+        "Build production features for Spellbook Associate, an agentic legal drafting product used by lawyers.",
+        "Work across user-facing product and model behaviour to ship, evaluate, and improve LLM-powered workflows.",
+        "Collaborate with engineering, product, and legal experts to turn ambiguous real-world work into dependable software."
+      ]
+    },
+    {
+      "company": "Avalon Holographics",
+      "companyUrl": "https://www.avalonholographics.com/",
+      "role": "Software Co-op Student",
+      "location": "St. John's, NL",
+      "dates": "Jan — Aug 2024",
+      "bullets": [
+        "Shipped end-to-end features for C++ applications powering high-fidelity holographic displays.",
+        "Integrated web APIs, GPU shaders, and custom data formats while iterating with a multidisciplinary product team."
+      ]
+    },
+    {
+      "company": "Memorial University",
+      "companyUrl": "https://www.mun.ca/",
+      "role": "Research Assistant & Honours Researcher",
+      "location": "St. John's, NL",
+      "dates": "2023 — 2025",
+      "bullets": [
+        "Built interactive heat-transfer and meteorological simulations for an augmented-reality sandbox, extending it into physics education for an honours thesis.",
+        "Developed a performance- and security-focused finite-field matrix multiplication library in Rust for cryptography research.",
+        "Improved a C++ lightfield simulator with state serialization and critical refactors; also developed MLflow workflows supporting breast-cancer research."
+      ]
+    }
+  ],
+  "education": {
+    "school": "Memorial University of Newfoundland",
+    "schoolUrl": "https://www.mun.ca/",
+    "degree": "B.Sc. (Honours), Computer Science",
+    "dates": "2021 — 2026",
+    "details": [
+      "Concentration in Visual Computing & Games · 3.96 GPA",
+      "Honours thesis: Modelling Physics Problems on an Augmented Reality Sandbox",
+      "President, MUN Computer Science Society · Dean's List, 2021–2025"
+    ]
+  },
+  "projects": [
+    {
+      "name": "Demo Night",
+      "url": "https://ethandenny.dev/demo-night",
+      "description": "Founded and host a recurring community event for technical demos; one edition brought together 50+ people for 20 presentations."
+    },
+    {
+      "name": "Connect2",
+      "url": "https://github.com/EthanDenny/connect2",
+      "description": "Led a six-person team building a React social product from concept through deployment; won Best Design at the D.O. IT Hackathon."
+    }
+  ],
+  "recognition": [
+    "techNL Making Waves Innovator Scholarship, 2024",
+    "D.O. IT Hackathon — Best Design, 2024"
+  ]
+}

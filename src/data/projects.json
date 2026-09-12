@@ -3,15 +3,29 @@
     "year": 2025,
     "links": [
       {
-        "name": "To Boldly Go Where None Have Gone Before",
-        "description": "project for COMP 4304",
+        "name": "Fitness",
+        "description": "tracking my progress",
+        "link": "https://fitness.ethandenny.dev/",
+        "wip": false,
+        "hidden": false
+      },
+      {
+        "name": "Faces",
+        "description": "little guy generator",
+        "link": "https://faces.ethandenny.dev/",
+        "wip": false,
+        "hidden": false
+      },
+      {
+        "name": "To Boldly Go",
+        "description": "the history of human spaceflight",
         "link": "https://github.com/EthanDenny/to-boldly-go",
         "wip": false,
         "hidden": false
       },
       {
-        "name": "Modelling Physics Problems on an Augmented Reality Sandbox",
-        "description": "undergrad thesis",
+        "name": "Undergrad Thesis",
+        "description": "modelling physics problems on an augmented reality sandbox",
         "link": "https://davechurchill.ca/publications/pdf/theses/EthanDenny_Thesis_Honours.pdf",
         "wip": false,
         "hidden": false
@@ -22,49 +36,16 @@
     "year": 2024,
     "links": [
       {
-        "name": "Bubblegum Bloodbath",
-        "description": "project for COMP 4300",
-        "link": "https://www.youtube.com/watch?v=APVTMvT-CXE",
-        "wip": false,
-        "hidden": false
-      },
-      {
         "name": "Connect2",
-        "description": "team submission for the D.O. IT Hackathon",
+        "description": "hackathon project for 2d social media",
         "link": "https://github.com/EthanDenny/do-it-hackathon",
         "wip": false,
         "hidden": false
       },
       {
         "name": "Pixelz",
-        "description": "falling-sand game",
+        "description": "falling sand game",
         "link": "https://pixelz.ethandenny.dev/",
-        "wip": false,
-        "hidden": false
-      }
-    ]
-  },
-  {
-    "year": 2023,
-    "links": [
-      {
-        "name": "Lossless Compression Techniques for Grayscale Images",
-        "description": "project for COMP 3301",
-        "link": "https://github.com/EthanDenny/visual-computing-course-project",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "tiny text",
-        "description": "minimalist text editor",
-        "link": "https://github.com/EthanDenny/tiny-text-editor",
-        "wip": false,
-        "hidden": false
-      },
-      {
-        "name": "Can't Stop",
-        "description": "project for COMP 2005",
-        "link": "https://github.com/EthanDenny/comp-2005-cant-stop-jar",
         "wip": false,
         "hidden": false
       }

@@ -1,7 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-import Divider from "../components/Divider.astro";
 
 import "../styles/global.css";
 
@@ -14,7 +13,6 @@ const { title } = Astro.props;
   </head>
   <body class="bg-canvas text-ink mx-auto my-8 max-w-[768px] px-4">
     <Header />
-    <Divider />
     <slot />
   </body>
 </html>
