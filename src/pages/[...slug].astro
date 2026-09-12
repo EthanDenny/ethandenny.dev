@@ -1,10 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import type { AnyEntryMap } from "astro:content";
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
   const getEntries = async (collection: keyof AnyEntryMap) => {
@@ -40,25 +37,15 @@ const postData = entry.data;
   };
 </script>
 
-<html lang="en">
-  <head>
-    <BaseHead title={postData.title} />
-  </head>
-  <body class="px-4">
-    <div class="fixed left-0 top-0 h-1 w-full">
-      <div class="h-1 w-0 bg-orange" id="progress-bar"></div>
+<BaseLayout title={postData.title.toLowerCase()}>
+  <div class="fixed top-0 left-0 h-1 w-full">
+    <div class="bg-orange h-1 w-0" id="progress-bar"></div>
+  </div>
+  <main class="mb-8 flex flex-col gap-4">
+    <h1 class="text-lg font-bold lowercase">{postData.title}</h1>
+    <p class="text-muted text-sm lowercase">Published: {postData.pubDate}</p>
+    <div class="post-content">
+      <Content />
     </div>
-    <div class="mx-auto max-w-[768px]">
-      <Header />
-      <h2 class="mb-6 md:mt-8">
-        {postData.title}
-      </h2>
-      <p class="mb-6 w-full text-left text-lg">
-        Published: {postData.pubDate}
-      </p>
-      <div class="post-content mb-8">
-        <Content />
-      </div>
-    </div>
-  </body>
-</html>
+  </main>
+</BaseLayout>

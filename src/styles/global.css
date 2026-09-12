@@ -6,7 +6,7 @@
   /* Core site palette. Keep /design in sync when these change. */
   --color-canvas: #ffffff;
   --color-ink: #1e293b;
-  --color-forest: #253d2c;
+  --color-forest: #000000;
   --color-link: #c0266d;
   --color-muted: #64748b;
   --color-rule: #cbd5e1;
@@ -25,6 +25,15 @@
   a {
     @apply underline;
     @apply text-link;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-black;
   }
 
   a:focus-visible,
