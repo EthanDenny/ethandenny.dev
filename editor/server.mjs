@@ -91,7 +91,7 @@ async function routeRequest(request, response) {
 
     if (request.method === "DELETE") {
       assertLocalMutation(request);
-      await withAstroRestart(true, () => deletePost(slug));
+      await withAstroRestart(() => deletePost(slug));
       sendJson(response, 200, { deleted: slug });
       return;
     }
@@ -100,8 +100,7 @@ async function routeRequest(request, response) {
   if (request.method === "POST" && pathname === "/api/posts") {
     assertLocalMutation(request);
     const post = validatePost(await readJsonBody(request));
-    const routeChanged = !post.originalSlug || post.originalSlug !== post.slug;
-    await withAstroRestart(routeChanged, () => savePost(post));
+    await withAstroRestart(() => savePost(post));
     const previewReady = await waitForPreview(post.slug);
     sendJson(response, 200, { saved: post.slug, previewReady });
     return;
@@ -375,8 +374,8 @@ async function isSiteRunning() {
   }
 }
 
-async function withAstroRestart(routeChanged, change) {
-  if (!routeChanged || !managesAstro) return change();
+async function withAstroRestart(change) {
+  if (!managesAstro) return change();
 
   await stopAstro();
   try {

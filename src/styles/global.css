@@ -45,4 +45,115 @@
     @apply ml-4;
     @apply list-disc;
   }
+
+  blockquote {
+    @apply border-l-4 border-slate-200 pl-4 text-slate-500;
+  }
+
+  blockquote p + p {
+    @apply mt-2;
+  }
+
+  .writing-post h2 {
+    @apply mt-2 text-base font-bold lowercase;
+  }
+
+  .writing-post h3 {
+    @apply mt-2 text-sm font-bold lowercase;
+  }
+
+  .writing-post h4,
+  .writing-post h5,
+  .writing-post h6 {
+    @apply mt-2 text-sm font-semibold lowercase;
+  }
+
+  .writing-post .embed-list-item {
+    @apply ml-0 list-none;
+  }
+
+  .writing-post .embed-card {
+    @apply my-1 max-w-xl overflow-hidden rounded-sm border-l-4 border-slate-300 bg-slate-50;
+  }
+
+  .writing-post .embed-card-header {
+    @apply flex items-baseline justify-between gap-4 px-4 pt-3 text-sm;
+  }
+
+  .writing-post .embed-card-header span,
+  .writing-post .embed-card-site {
+    @apply text-xs text-slate-500;
+  }
+
+  .writing-post .tweet-preview {
+    @apply px-4 pb-3;
+  }
+
+  .writing-post .tweet-preview .embed-card-header {
+    @apply px-0;
+  }
+
+  .writing-post .tweet-preview blockquote {
+    @apply mt-2 border-0 p-0 text-slate-700;
+  }
+
+  .writing-post .tweet-preview blockquote p {
+    @apply mb-2;
+  }
+
+  .writing-post .link-preview {
+    @apply flex text-slate-700 no-underline;
+  }
+
+  .writing-post .embed-card-copy {
+    @apply flex min-w-0 flex-1 flex-col gap-1 p-4;
+  }
+
+  .writing-post .embed-card-copy strong {
+    @apply text-black;
+  }
+
+  .writing-post .embed-card-description {
+    @apply line-clamp-2 text-sm text-slate-500;
+  }
+
+  .writing-post .link-preview img {
+    @apply h-auto w-32 shrink-0 border-l border-slate-200 object-cover;
+  }
+
+  .writing-post img {
+    @apply block h-auto max-w-full rounded-sm;
+  }
+
+  .writing-post .image-small {
+    @apply w-64;
+  }
+
+  .writing-post .image-medium {
+    @apply w-md;
+  }
+
+  .writing-post .image-left {
+    @apply mr-auto;
+  }
+
+  .writing-post .image-center {
+    @apply mx-auto;
+  }
+
+  .writing-post .image-right {
+    @apply ml-auto;
+  }
+
+  .writing-post .image-crop {
+    @apply aspect-video w-full object-cover;
+  }
+
+  .writing-post .image-row {
+    @apply grid grid-cols-1 items-start gap-4 sm:grid-cols-2;
+  }
+
+  .writing-post .image-row img {
+    @apply w-full;
+  }
 }
