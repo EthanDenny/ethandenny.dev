@@ -1,0 +1,48 @@
+src/components/Header.astro
+  s_13f18716b4aad2::t_50d845ab895a34 7-10
+src/pages/index.astro
+  s_13f18716b4aad2::t_44aa9d38a10494 59
+  s_13f18716b4aad2::t_e93df428105bc2 9-11
+src/content.config.ts
+  s_13f18716b4aad2::t_e93df428105bc2 13
+editor/public/styles.css
+  s_13f18716b4aad2::t_e93df428105bc2 160-161,166-181,205,236-249
+  s_09fd69da969f97::t_0db22c643a7ddd 250
+editor/public/index.html
+  s_13f18716b4aad2::t_e93df428105bc2 53-56
+editor/public/app.js
+  s_13f18716b4aad2::t_e93df428105bc2 5,59-67,71,89,107,128,242
+editor/server.mjs
+  s_13f18716b4aad2::t_e93df428105bc2 125-130,158,169,217,223-224,244,259
+README.md
+  s_13f18716b4aad2::t_e93df428105bc2 9-10
+src/content/writing/adventures-with-microcontroller.md
+  s_13f18716b4aad2::t_e93df428105bc2 4
+src/pages/writing/[...slug].astro
+  s_13f18716b4aad2::t_44aa9d38a10494 30
+  s_13f18716b4aad2::t_e93df428105bc2 7-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "aa0c10459e114a61b0bb17eda88bac6cd9d235e2",
+  "prompts": {},
+  "sessions": {
+    "s_09fd69da969f97": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0990e-8649-7d90-a925-5a854afee244",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    },
+    "s_13f18716b4aad2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a09683-ade2-7153-af1c-9b1e524212ad",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
