@@ -4,7 +4,9 @@ import type { CollectionEntry } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("writing");
+  const posts = (await getCollection("writing")).filter(
+    ({ data }) => import.meta.env.DEV || !data.draft,
+  );
 
   return posts.map((post) => ({
     params: { slug: post.id },
@@ -25,7 +27,7 @@ const { Content } = await render(post);
     <header class="flex items-baseline justify-between gap-4">
       <h1 class="text-lg font-bold lowercase">{post.data.title}</h1>
       <time
-        class="text-right text-sm text-slate-500"
+        class="text-right text-sm whitespace-nowrap text-slate-500"
         datetime={post.data.date.toISOString()}
       >
         {post.data.date.toISOString().slice(0, 10)}

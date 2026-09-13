@@ -1,6 +1,7 @@
 ---
 title: "Adventures with microcontrollers"
 date: 2026-09-12
+draft: true
 ---
 
 > Adapted from a presentation I gave at [Demo Night 5](https://demo-night.fly.dev)

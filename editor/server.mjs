@@ -122,7 +122,12 @@ async function listPosts() {
       .map(async (file) => {
         const slug = file.name.slice(0, -3);
         const post = await readPost(slug);
-        return { slug, title: post.title, date: post.date };
+        return {
+          slug,
+          title: post.title,
+          date: post.date,
+          draft: post.draft,
+        };
       }),
   );
 
@@ -150,7 +155,7 @@ async function readPost(slug) {
   return { slug, ...parseMarkdown(source) };
 }
 
-async function savePost({ originalSlug, slug, title, date, body }) {
+async function savePost({ originalSlug, slug, title, date, draft, body }) {
   const destination = postPath(slug);
   const source = originalSlug ? postPath(originalSlug) : null;
 
@@ -161,7 +166,7 @@ async function savePost({ originalSlug, slug, title, date, body }) {
   }
 
   const temporary = `${destination}.${process.pid}.${Date.now()}.tmp`;
-  const markdown = `---\ntitle: ${JSON.stringify(title)}\ndate: ${date}\n---\n\n${body.trim()}\n`;
+  const markdown = `---\ntitle: ${JSON.stringify(title)}\ndate: ${date}\ndraft: ${draft}\n---\n\n${body.trim()}\n`;
 
   await writeFile(temporary, markdown, "utf8");
   await rename(temporary, destination);
@@ -209,11 +214,14 @@ function parseMarkdown(source) {
   return {
     title: String(fields.title ?? ""),
     date: String(fields.date ?? ""),
+    draft: fields.draft === true,
     body: match[2].replace(/^\r?\n/, "").trimEnd(),
   };
 }
 
 function parseScalar(value) {
+  if (value === "true") return true;
+  if (value === "false") return false;
   if (value.startsWith('"')) {
     try {
       return JSON.parse(value);
@@ -233,6 +241,7 @@ function validatePost(value) {
   const slug = String(value.slug ?? "").trim();
   const title = String(value.title ?? "").trim();
   const date = String(value.date ?? "").trim();
+  const draft = value.draft === true;
   const body = String(value.body ?? "");
 
   if (originalSlug) validateSlug(originalSlug);
@@ -247,7 +256,7 @@ function validatePost(value) {
     throw badRequest("Post body is too large.");
   }
 
-  return { originalSlug, slug, title, date, body };
+  return { originalSlug, slug, title, date, draft, body };
 }
 
 function validateSlug(slug) {

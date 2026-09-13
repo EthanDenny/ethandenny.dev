@@ -157,9 +157,26 @@ h2 {
 
 #posts strong {
   overflow: hidden;
-  width: 100%;
+  min-width: 0;
+  flex: 1;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.post-title-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.4rem;
+}
+
+.draft-badge {
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #475569;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
 }
 
 #posts time {
@@ -185,7 +202,7 @@ h2 {
 
 .metadata {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(10rem, 0.65fr) 9rem;
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, 0.65fr) 9rem auto;
   gap: 0.75rem;
   margin-bottom: 0.75rem;
 }
@@ -214,6 +231,21 @@ iframe {
 input,
 textarea {
   padding: 0.65rem;
+}
+
+.draft-field {
+  align-self: end;
+  align-items: center;
+  min-height: 2.7rem;
+  flex-direction: row;
+}
+
+.draft-field input {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  padding: 0;
+  accent-color: #c0266d;
 }
 
 .body-field {

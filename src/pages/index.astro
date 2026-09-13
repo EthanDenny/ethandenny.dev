@@ -6,9 +6,9 @@ import projects from "../data/projects.json";
 const workLink = "https://www.spellbook.com/";
 const schoolLink = "https://www.mun.ca/";
 const demoNightLink = "https://demo-night.fly.dev";
-const writing = (await getCollection("writing")).sort(
-  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
-);
+const writing = (await getCollection("writing"))
+  .filter(({ data }) => !data.draft)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <BaseLayout>
@@ -56,7 +56,7 @@ const writing = (await getCollection("writing")).sort(
             <div class="flex w-full items-baseline justify-between gap-4">
               <a href={`/writing/${id}`}>{data.title}</a>
               <time
-                class="text-right text-sm text-slate-500"
+                class="text-right text-sm whitespace-nowrap text-slate-500"
                 datetime={data.date.toISOString()}
               >
                 {data.date.toISOString().slice(0, 10)}

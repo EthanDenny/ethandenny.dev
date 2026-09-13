@@ -2,6 +2,7 @@ const elements = {
   body: document.querySelector("#body"),
   date: document.querySelector("#date"),
   deletePost: document.querySelector("#delete-post"),
+  draft: document.querySelector("#draft"),
   form: document.querySelector("#post-form"),
   newPost: document.querySelector("#new-post"),
   openPreview: document.querySelector("#open-preview"),
@@ -55,10 +56,19 @@ function renderPostList() {
 
       const title = document.createElement("strong");
       title.textContent = post.title;
+      const titleRow = document.createElement("span");
+      titleRow.className = "post-title-row";
+      titleRow.append(title);
+      if (post.draft) {
+        const badge = document.createElement("span");
+        badge.className = "draft-badge";
+        badge.textContent = "draft";
+        titleRow.append(badge);
+      }
       const date = document.createElement("time");
       date.dateTime = post.date;
       date.textContent = post.date;
-      button.append(title, date);
+      button.append(titleRow, date);
       button.addEventListener("click", () => openPost(post.slug));
       return button;
     }),
@@ -76,6 +86,7 @@ async function openPost(slug, confirmNavigation = true) {
     elements.title.value = post.title;
     elements.slug.value = post.slug;
     elements.date.value = post.date;
+    elements.draft.checked = post.draft;
     elements.body.value = post.body;
     elements.deletePost.hidden = false;
     setDirty(false);
@@ -93,6 +104,7 @@ function startNewPost(confirmNavigation = true) {
   state.slugEdited = false;
   elements.form.reset();
   elements.date.value = today();
+  elements.draft.checked = true;
   elements.deletePost.hidden = true;
   setDirty(false);
   renderPostList();
@@ -113,6 +125,7 @@ async function savePost(event) {
       slug: elements.slug.value.trim(),
       title: elements.title.value.trim(),
       date: elements.date.value,
+      draft: elements.draft.checked,
       body: elements.body.value,
     };
     await request("/api/posts", {
@@ -226,6 +239,7 @@ for (const input of [
   elements.title,
   elements.slug,
   elements.date,
+  elements.draft,
   elements.body,
 ]) {
   input.addEventListener("input", () => setDirty());
