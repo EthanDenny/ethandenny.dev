@@ -1,0 +1,51 @@
+src/pages/writing/[...slug].astro
+  s_13f18716b4aad2::t_e9af26f9f475de 25-33
+  s_13f18716b4aad2::t_2a9c244b622e86 24
+README.md
+  s_13f18716b4aad2::t_986c80d0923b29 10-34
+src/styles/global.css
+  s_13f18716b4aad2::t_6212cc9845da83 76
+  s_13f18716b4aad2::t_b193665b38c55c 123-124,126-158
+  s_13f18716b4aad2::t_e0504c42c46f44 70-75,77-122
+  s_13f18716b4aad2::t_c46a7f09108894 125
+  s_13f18716b4aad2::t_a0b91195becf5b 50
+  s_13f18716b4aad2::t_6ecdd705d4a991 48-49,51-55
+  s_13f18716b4aad2::t_2a9c244b622e86 56-69
+src/content/writing/adventures-with-microcontroller.md
+  s_8761d75a18f847::t_576530db5930e3 7,9,11,13,17,26-27,29,31-33,39,41,47,50-53,55,57,74-76,91-92,97
+  s_13f18716b4aad2::t_c46a7f09108894 6,8,10,12,14-16,18-25,30,34-38,40,42-46,48-49,54,56,58-73,77-90,93-96,98
+  s_13f18716b4aad2::t_191f63674dbf55 1-5,28
+astro.config.mjs
+  s_13f18716b4aad2::t_e0504c42c46f44 4,8-10
+src/components/Header.astro
+  s_13f18716b4aad2::t_0ba1f876cfe6b6 10
+src/lib/remark-embeds.mjs
+  s_13f18716b4aad2::t_e0504c42c46f44 1-174,177-223,227-289,291-336
+  s_13f18716b4aad2::t_63c03419f906f5 175-176,224-226,290
+editor/server.mjs
+  s_13f18716b4aad2::t_b23907690f86b5 94,103,377-378
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "49d81ed744b94b910fa53acab1984f6fa5db8ff8",
+  "prompts": {},
+  "sessions": {
+    "s_13f18716b4aad2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a09683-ade2-7153-af1c-9b1e524212ad",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    },
+    "s_8761d75a18f847": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a09767-bc90-7c41-9b7d-761b1961051c",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
