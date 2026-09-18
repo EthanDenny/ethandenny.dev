@@ -1,0 +1,19 @@
+src/data/projects.json
+  s_8af2cde8ca047c::t_105a9e01502b0a 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "546c4507d6eb9b61a39144759ebab2e2b7b603b2",
+  "prompts": {},
+  "sessions": {
+    "s_8af2cde8ca047c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0b515-016d-7622-b2e4-447d96b6c806",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
