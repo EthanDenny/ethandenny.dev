@@ -1,5 +1,10 @@
 [
   {
+    "name": "Chat95",
+    "description": "what if windows 95 had an LLM?",
+    "link": "https://chat95.ethandenny.dev/"
+  },
+  {
     "name": "Fitness",
     "description": "tracking my progress",
     "link": "https://fitness.ethandenny.dev/"
@@ -21,7 +26,7 @@
   },
   {
     "name": "Connect2",
-    "description": "hackathon project for 2d social media",
+    "description": "2d social media",
     "link": "https://github.com/EthanDenny/do-it-hackathon"
   },
   {
