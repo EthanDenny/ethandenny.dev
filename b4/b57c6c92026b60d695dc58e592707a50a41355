@@ -1,0 +1,19 @@
+public/.well-known/discord
+  s_369d6bfe3d4f22::t_6329b41946cf03 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b4b57c6c92026b60d695dc58e592707a50a41355",
+  "prompts": {},
+  "sessions": {
+    "s_369d6bfe3d4f22": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d0c4-054f-7c52-88a3-9f465ae6bebd",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
