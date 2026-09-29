@@ -4,13 +4,9 @@ date: 2026-09-12
 draft: true
 ---
 
-> Adapted from a presentation I gave at [Demo Night 5](https://demo-night.fly.dev)
+> Adapted from a presentation I gave at [Demo Night 5](/demo-night/)
 
-## What even is a microcontroller?
-
-According to the Google slop, it is “a tiny, self-contained computer on a single integrated circuit chip designed to govern specific operations in embedded systems.”
-
-Technically correct. In practice, it is a tiny, cheap computer that you can plug into things:
+A microcontroller is “a tiny, self-contained computer on a single integrated circuit chip designed to govern specific operations in embedded systems.” In practice, it is a tiny, cheap computer that you can plug into things:
 
 - An Arduino: yes
 - A Raspberry Pi: kinda

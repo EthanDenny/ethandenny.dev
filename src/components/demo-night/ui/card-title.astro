@@ -1,0 +1,17 @@
+---
+import { cn } from "../utils";
+
+interface Props {
+  className?: string;
+}
+
+const { className = "", ...rest } = Astro.props;
+---
+
+<div
+  data-slot="card-title"
+  class={cn("font-heading leading-none", className)}
+  {...rest}
+>
+  <slot />
+</div>

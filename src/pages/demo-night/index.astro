@@ -1,0 +1,214 @@
+---
+import BaseLayout from "../../layouts/DemoNightLayout.astro";
+import Card from "../../components/demo-night/ui/card.astro";
+import CardHeader from "../../components/demo-night/ui/card-header.astro";
+import CardTitle from "../../components/demo-night/ui/card-title.astro";
+import CardDescription from "../../components/demo-night/ui/card-description.astro";
+import CardContent from "../../components/demo-night/ui/card-content.astro";
+import CardAction from "../../components/demo-night/ui/card-action.astro";
+import Button from "../../components/demo-night/ui/button.astro";
+import Checkmark from "../../components/demo-night/ui/checkmark.astro";
+import Accordion from "../../components/demo-night/ui/accordion.astro";
+import AccordionItem from "../../components/demo-night/ui/accordion-item.astro";
+import AccordionContent from "../../components/demo-night/ui/accordion-content.astro";
+
+const LUMA_URL = "https://luma.com/px2a1hjt";
+const LOCATION_URL =
+  "https://www.google.com/maps/search/?api=1&query=Bannerman%20Brewing%20Co.%2C%2090%20Duckworth%20Street%2C%20St.%20John%27s%2C%20NL";
+---
+
+<BaseLayout title="demo night">
+  <div class="flex flex-col items-center gap-8">
+    <Card className="w-full max-w-2xl">
+      <CardHeader>
+        <CardTitle className="text-4xl">Demo Night</CardTitle>
+        <CardDescription className="flex items-center gap-2 text-sm">
+          <span class="italic">noun</span>
+          <span>|</span>
+          <span class="italic">{`/ˈdemō nīt/`}</span>
+        </CardDescription>
+        <CardAction>
+          <a href={LUMA_URL} target="_blank" rel="noopener noreferrer" class="font-bold underline">
+            <Button>Sign up</Button>
+          </a>
+        </CardAction>
+      </CardHeader>
+      <CardContent>
+        <p>
+          A meet up focused around short talks & demos, by professionals, for
+          professionals.
+        </p>
+        <p class="mt-4 font-bold">
+          Demo Night 6 · Saturday, November 21 · 6–10 PM · Bannerman Brewery
+        </p>
+      </CardContent>
+    </Card>
+    <div
+      class="flex flex-col justify-start gap-8 w-full max-w-2xl px-[calc(1.5rem+var(--spacing-boxShadowX))]"
+    >
+      <section>
+        <img
+          src="/demo-night/images/1/DSCF1306.webp"
+          alt="Photo of a presentation at Demo Night"
+          class="rounded-base w-full"
+        width={1200} height={800} loading="eager" />
+      </section>
+      <section class="flex flex-col gap-4">
+        <h2 class="text-2xl">Do you enjoy:</h2>
+        <ul class="flex flex-col gap-2 font-medium">
+          <li class="flex items-center gap-3">
+            <Checkmark />
+            <span>Listening to people talk about cool stuff?</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <Checkmark />
+            <span>Learning about new ideas, tech, and tools?</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <Checkmark />
+            <span>Building your own cool stuff?</span>
+          </li>
+        </ul>
+        <h4 class="text-lg">
+          Then Demo Night is for <span class="italic">you.</span>
+        </h4>
+        <p class="text-sm">
+          Share ideas, get feedback, and see what your likeminded community is
+          up to.
+        </p>
+      </section>
+      <section>
+        <Accordion className="flex flex-col gap-8">
+          <AccordionItem>
+            <div
+              id="event-details"
+              class="flex flex-1 items-center justify-between text-left text-base text-main-foreground border-border w-full bg-main p-4 font-heading rounded-b-none border-b-2"
+            >
+              When is it?
+            </div>
+            <AccordionContent>
+              Demo Night 6 is on <span class="font-bold"
+                >Saturday, November 21, 2026</span
+              > from <span class="font-bold">6–10 PM</span> upstairs at{" "}
+              <a href={LOCATION_URL} target="_blank" class="font-bold underline"
+                >Bannerman Brewery</a
+              >.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem>
+            <div
+              class="flex flex-1 items-center justify-between text-left text-base text-main-foreground border-border w-full bg-main p-4 font-heading rounded-b-none border-b-2"
+            >
+              {" "}How can I sign up to present / attend?{" "}
+            </div>
+            <AccordionContent>
+              Register for Demo Night 6 on <a
+                href={LUMA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-bold underline">Luma</a
+              >.
+            </AccordionContent>
+          </AccordionItem>
+          <img
+            src="/demo-night/images/1/DSCF1597.webp"
+            alt="Photo of the Spellbook office"
+            class="rounded-base w-full"
+          width={1200} height={800} loading="lazy" />
+          <AccordionItem>
+            <div
+              class="flex flex-1 items-center justify-between text-left text-base text-main-foreground border-border w-full bg-main p-4 font-heading rounded-b-none border-b-2"
+            >
+              What are the vibes like?
+            </div>
+            <AccordionContent>
+              See more pictures in our
+              <a
+                href="/demo-night/gallery"
+                class="font-bold underline cursor-pointer"
+              >
+                gallery
+              </a>
+              of past events! 📸
+            </AccordionContent>
+          </AccordionItem>
+          <img
+            src="/demo-night/images/2/alex-presenting-2.webp"
+            alt="Photo of a presentation at Demo Night"
+            class="rounded-base w-full"
+          width={1200} height={960} loading="lazy" />
+          <AccordionItem>
+            <div
+              class="flex flex-1 items-center justify-between text-left text-base text-main-foreground border-border w-full bg-main p-4 font-heading rounded-b-none border-b-2"
+            >
+              What are the rules?
+            </div>
+            <AccordionContent>
+              <ul class="list-disc pl-4 space-y-2">
+                <li>
+                  You can present about anything you want, as long as it's
+                  technical in nature, and you built or created it in some way.
+                </li>
+                <li>
+                  Presentations should be about 5-10 minutes long. We're
+                  limiting the time to keep the event moving along and allow
+                  more people to present.
+                </li>
+                <li>
+                  Other than that, it can be anything you want - from functional
+                  programming, a neat AI tool you've been using, or about an
+                  <code class="italic">[insert niche topic here]</code> that you're
+                  really interested in.
+                </li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+          <img
+            src="/demo-night/images/3/DSCF2647.webp"
+            alt="Photo of Ethan Denny"
+            class="rounded-base w-full"
+          width={1200} height={800} loading="lazy" />
+          <AccordionItem>
+            <div
+              class="flex flex-1 items-center justify-between text-left text-base text-main-foreground border-border w-full bg-main p-4 font-heading rounded-b-none border-b-2"
+            >
+              Who's organizing it?
+            </div>
+            <AccordionContent>
+              Demo Night is brought to you by
+              <a
+                href="https://ethandenny.dev"
+                target="_blank"
+                class="font-bold underline">Ethan Denny</a
+              >, with special thanks to Jack Harrhy, Scott Stevenson, Adam
+              Keating, Emily Murphy, Sarah Canning, Alex Gaudon, and Alex Whalen for
+              everything they've done to make this possible. Gallery photos by
+              <a
+                href="https://www.instagram.com/thecrypticcanadian/"
+                target="_blank"
+                class="font-bold underline">Ethan Crann</a
+              >, <a
+                href="https://jack.camera"
+                target="_blank"
+                class="font-bold underline">Jack</a
+              >, and <a
+                href="https://www.instagram.com/sharifsircarphoto/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-bold underline">Sharif Sircar</a
+              >. Hosting spaces (and pizza 🍕) provided by the fine folks at <a
+                href="https://spellbook.com"
+                target="_blank"
+                class="font-bold underline">Spellbook</a
+              > and <a
+                href="https://www.colabsoftware.com/"
+                target="_blank"
+                class="font-bold underline">CoLab</a
+              >.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

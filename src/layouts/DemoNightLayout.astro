@@ -1,0 +1,37 @@
+---
+import "../styles/demo-night.css";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/demo-night/favicon.svg?v=2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta property="og:title" content="Demo Night" />
+  </head>
+  <body>
+    {/* Margin trick lets us start halfway through a grid cell */}
+    <div
+      class="-mt-4 -ml-4 pt-12 px-6 pb-10 min-h-fit h-100 bg-[linear-gradient(to_right,#80808020_1px,transparent_1px),linear-gradient(to_bottom,#80808030_1px,transparent_1px)] [background-size:40px_40px] bg-secondary-background"
+    >
+      <slot />
+      <div class="hidden lg:block fixed right-0 bottom-0 text-xs opacity-20">
+        <a
+          href="https://www.youtube.com/watch?v=han3AfjH210"
+          target="_blank"
+          class="font-bold underline"
+        >
+          No, not this guy
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

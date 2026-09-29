@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/DemoNightLayout.astro";
+import photos from "../../data/demo-night-photos.json";
+
+const dates: Record<string, string> = {
+  "1": "August 2025",
+  "2": "November 2025",
+  "3": "February 2026",
+  "5": "August 2026",
+};
+const shuffledPhotos = [...photos].sort(() => Math.random() - 0.5);
+---
+
+<BaseLayout title="Gallery | Demo Night">
+  <div class="mb-6 pl-4">
+    <a href="/demo-night/" class="font-bold underline">Back</a>
+  </div>
+  <div class="pl-4 columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+    {shuffledPhotos.map((photo) => (
+      <div class="break-inside-avoid mb-4">
+        <div
+          class="w-full rounded overflow-hidden"
+          style={`aspect-ratio: ${photo.width}/${photo.height};`}
+          title={`Demo Night ${photo.event} (${dates[photo.event]})`}
+        >
+          <img
+            src={photo.src}
+            alt={`Demo Night ${photo.event}: ${photo.filename}`}
+            width={photo.width}
+            height={photo.height}
+            class="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

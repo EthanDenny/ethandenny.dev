@@ -5,9 +5,9 @@ import projects from "../data/projects.json";
 
 const workLink = "https://www.spellbook.com/";
 const schoolLink = "https://www.mun.ca/";
-const demoNightLink = "https://demo-night.fly.dev";
+const demoNightLink = "/demo-night/";
 const writing = (await getCollection("writing"))
-  .filter(({ data }) => !data.draft)
+  .filter(({ data }) => import.meta.env.DEV || !data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
@@ -49,7 +49,10 @@ const writing = (await getCollection("writing"))
     </section>
 
     <section id="writing" class="flex scroll-mt-8 flex-col gap-4">
-      <h4 class="text-lg font-bold">Writing</h4>
+      <div class="flex items-baseline justify-between gap-4">
+        <h4 class="text-lg font-bold">Writing</h4>
+        <a class="text-sm" href="/rss.xml">rss</a>
+      </div>
       <div class="flex flex-col gap-2">
         {
           writing.map(({ id, data }) => (

@@ -1,0 +1,13 @@
+---
+import { cn } from "../utils";
+
+const { ...rest } = Astro.props;
+---
+
+<div
+  data-slot="card-content"
+  class={cn("px-6")}
+  {...rest}
+>
+  <slot />
+</div>
