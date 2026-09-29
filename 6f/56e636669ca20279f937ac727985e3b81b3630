@@ -1,0 +1,112 @@
+src/components/BaseHead.astro
+  s_041b0465224f48::t_6f2923d5ccb961 8-13
+src/pages/index.astro
+  s_13f18716b4aad2::t_62e6085721e392 10
+  s_041b0465224f48::t_92d510b96c4f34 52-55
+  s_d67b211e5267bf::t_b10f3a52555121 8
+package.json
+  s_041b0465224f48::t_c2d5d08d152b0e 14
+  s_e11290fb9d4bd9::t_f68d361c18026e 18-20,28
+src/pages/rss.xml.js
+  s_041b0465224f48::t_7b915f44a069f8 1-3,12-24,26-28
+  s_041b0465224f48::t_92d510b96c4f34 4-11,25
+scripts/build-resume-pdf.py
+  s_8e82bf907c3b6a::t_6dc331ecd90057 171,195,270,293-297
+  s_8e82bf907c3b6a::t_ca710d8920c2e2 65-66,76-77,84-85,93-94,101-102,108-109,117-118,123-124,131-132,141,146-147,269
+  s_8e82bf907c3b6a::t_108e7ac34dccd0 1-47,49-64,67-75,78-83,86-92,95-100,103-107,110-116,119-122,125-130,133-140,142-145,148-170,172-194,196-268,271-292,298-328
+  s_8e82bf907c3b6a::t_05d2616c3a94c1 48
+package-lock.json
+  s_e11290fb9d4bd9::t_8d54b98f3f5429 12,16-18,26,156-175,454,889-891,895,908,912-914,918,931,972-974,978,989-991,995,1006-1008,1012,1023-1025,1029,1040-1042,1046,1074-1076,1080,1091-1093,1097,1108-1110,1114,1125-1127,1131,1142-1144,1148,1161,1165-1167,1171,1184,1188-1190,1194,1207,1234-1236,1240,1253,1257-1259,1263,1276,1280-1282,1286,1299,1303-1305,1309,1322,1326-1328,1332,1336,1383-1385,1389,1403-1405,1409,1423-1425,1429,1508-1519,2554-2565,3059-3070,3563-3601,4089-4100,6026-6040,6055-6060,6684-6687,6692-6693,6702-6765,6867-6881,6905-6914,8359-8373
+public/demo-night/favicon.svg
+  s_d67b211e5267bf::t_0704ccd65c303d 1-3
+scripts/prepare-demo-night-images.mjs
+  s_d67b211e5267bf::t_e6fc90e64f5229 1-43
+src/components/demo-night/ui/accordion-content.astro
+  s_d67b211e5267bf::t_489e21bbaab6e7 1-9
+src/components/demo-night/ui/accordion-item.astro
+  s_d67b211e5267bf::t_c84cdaa136fd23 1-3
+src/components/demo-night/ui/accordion.astro
+  s_d67b211e5267bf::t_7b7d9e8a9685ca 1-11
+src/components/demo-night/ui/button.astro
+  s_d67b211e5267bf::t_942368f5e59abf 1-28
+src/components/demo-night/ui/buttonVariants.ts
+  s_d67b211e5267bf::t_4ad4e50502f6dd 1-28
+src/components/demo-night/ui/card-action.astro
+  s_d67b211e5267bf::t_5f61b2572c4fc2 1-15
+src/components/demo-night/ui/card-content.astro
+  s_d67b211e5267bf::t_d8ba7977e814b6 1-13
+src/components/demo-night/ui/card-description.astro
+  s_d67b211e5267bf::t_87d94da2d2d6c5 1-17
+src/components/demo-night/ui/card-footer.astro
+  s_d67b211e5267bf::t_e8b0ce4c8f6166 1-13
+src/components/demo-night/ui/card-header.astro
+  s_d67b211e5267bf::t_108581621553ff 1-15
+src/components/demo-night/ui/card-title.astro
+  s_d67b211e5267bf::t_57053ca7711613 1-17
+src/components/demo-night/ui/card.astro
+  s_d67b211e5267bf::t_581e23a89d0622 1-20
+src/components/demo-night/ui/checkmark.astro
+  s_d67b211e5267bf::t_b49de1f2611340 1-16
+src/components/demo-night/utils.ts
+  s_d67b211e5267bf::t_f8a85e50c027b4 1-6
+src/content/writing/adventures-with-microcontroller.md
+  s_d67b211e5267bf::t_42e151b3329695 7,9
+src/data/demo-night-photos.json
+  s_d67b211e5267bf::t_dae0305905616f 1-688
+src/layouts/DemoNightLayout.astro
+  s_d67b211e5267bf::t_cec670d3285e4e 1-37
+src/pages/demo-night/gallery.astro
+  s_d67b211e5267bf::t_cfc1c437f01529 1-39
+src/pages/demo-night/index.astro
+  s_d67b211e5267bf::t_9936069d5b0afb 1-214
+src/styles/demo-night.css
+  s_d67b211e5267bf::t_b351ce9c2bef3f 1-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6f56e636669ca20279f937ac727985e3b81b3630",
+  "prompts": {},
+  "sessions": {
+    "s_041b0465224f48": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0aff7-d5c6-7970-936d-bf7b42db08da",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    },
+    "s_13f18716b4aad2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a09683-ade2-7153-af1c-9b1e524212ad",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    },
+    "s_8e82bf907c3b6a": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0456a-5aa7-7362-9cc2-d204d69c96fc",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    },
+    "s_d67b211e5267bf": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0eed5-8d94-7db1-812f-0c8d4b89221a",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    },
+    "s_e11290fb9d4bd9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0eee1-7bf4-7821-bb7c-907eae7aa490",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
