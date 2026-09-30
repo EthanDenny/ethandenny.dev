@@ -1,0 +1,19 @@
+src/components/Header.astro
+  s_9bac9221c367f7::t_44cb59d11828ab 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bde68c9a500906f66647011c5cb3b077df1ca16f",
+  "prompts": {},
+  "sessions": {
+    "s_9bac9221c367f7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f2c9-3b62-7350-9606-fc8a2364bc31",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
