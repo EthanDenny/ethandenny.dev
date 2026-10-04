@@ -49,10 +49,7 @@ const writing = (await getCollection("writing"))
     </section>
 
     <section id="writing" class="flex scroll-mt-8 flex-col gap-4">
-      <div class="flex items-baseline justify-between gap-4">
-        <h4 class="text-lg font-bold">Writing</h4>
-        <a class="text-sm" href="/rss.xml">rss</a>
-      </div>
+      <h4 class="text-lg font-bold">Writing</h4>
       <div class="flex flex-col gap-2">
         {
           writing.map(({ id, data }) => (
