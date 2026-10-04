@@ -1,0 +1,21 @@
+public/_redirects
+  s_9bac9221c367f7::t_4d1300ea2a9ed1 1-3
+src/pages/index.astro
+  s_9bac9221c367f7::t_4d1300ea2a9ed1 52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "695d55c6dcc361920bfd5c6d1c76def67722889b",
+  "prompts": {},
+  "sessions": {
+    "s_9bac9221c367f7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0f2c9-3b62-7350-9606-fc8a2364bc31",
+        "model": "gpt-6-sol"
+      },
+      "human_author": "Ethan Denny <ethandenny@protonmail.com>"
+    }
+  }
+}
