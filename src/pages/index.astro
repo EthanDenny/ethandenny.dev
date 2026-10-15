@@ -1,14 +1,10 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import projects from "../data/projects.json";
 
 const workLink = "https://www.spellbook.com/";
 const schoolLink = "https://www.mun.ca/";
 const demoNightLink = "/demo-night/";
-const writing = (await getCollection("writing"))
-  .filter(({ data }) => import.meta.env.DEV || !data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <BaseLayout>
@@ -42,25 +38,6 @@ const writing = (await getCollection("writing"))
                   {description}
                 </span>
               )}
-            </div>
-          ))
-        }
-      </div>
-    </section>
-
-    <section id="writing" class="flex scroll-mt-8 flex-col gap-4">
-      <h4 class="text-lg font-bold">Writing</h4>
-      <div class="flex flex-col gap-2">
-        {
-          writing.map(({ id, data }) => (
-            <div class="flex w-full items-baseline justify-between gap-4">
-              <a href={`/writing/${id}`}>{data.title}</a>
-              <time
-                class="text-right text-sm whitespace-nowrap text-slate-500"
-                datetime={data.date.toISOString()}
-              >
-                {data.date.toISOString().slice(0, 10)}
-              </time>
             </div>
           ))
         }

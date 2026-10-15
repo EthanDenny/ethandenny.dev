@@ -1,6 +1,7 @@
 ---
 title: How to get a job as a software developer
 date: 2026-04-13
+draft: true
 ---
 
 Some general advice, your mileage may vary. That said, try do at least some of these things:
